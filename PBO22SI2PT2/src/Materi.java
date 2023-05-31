@@ -8,7 +8,7 @@ public class Materi {
     private String kurikulum;
     private String jenis;
     private String latihan;
-    
+
 
     public String getPertemuan() {
         return this.pertemuan;
@@ -41,6 +41,7 @@ public class Materi {
     public void setLatihan(String latihan) {
         this.latihan = latihan;
     }
+
 }
 
     
