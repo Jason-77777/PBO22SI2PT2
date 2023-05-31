@@ -41,7 +41,7 @@ public class Materi {
     public void setLatihan(String latihan) {
         this.latihan = latihan;
     }
-
+}
 
     
 
