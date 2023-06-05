@@ -9,4 +9,11 @@ public class App {
         System.out.println("4. Fitur Pencarian Pekerjaan");
         System.out.println("5. Pesan dan Notifikasi");
     }
+    public static void init(){
+        System.out.println("data");
+        Pekerja john = new Pekerja("321", "laki-laki", "0851274638", "jl uph no 2 blok m");
+        Pekerja jim = new Pekerja("123", "laki-laki", "085381633", "jl murai no 2 blok 1");
+        Pekerja jack = new Pekerja("126", "laki-laki", "082739264", "cemara garuda no 3");
+        
+    }
 }
