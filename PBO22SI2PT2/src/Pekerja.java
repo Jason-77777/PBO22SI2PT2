@@ -19,8 +19,6 @@ public class Pekerja {
         this.alamat = alamat;
     }
 
-
-
     public String getNama_Id() {
         return this.nama_Id;
     }
