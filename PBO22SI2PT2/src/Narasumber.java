@@ -11,6 +11,7 @@ public class Narasumber {
     private String jabatan;
     private String perusahaan;
 
+<<<<<<< HEAD
     public Narasumber (){
         
     }
@@ -26,6 +27,8 @@ public class Narasumber {
         this.perusahaan = perusahaan;
     }
 
+=======
+>>>>>>> 72eab9bbdb3f417467008d5b95ebec58348b1535
     public String getNama() {
         return this.nama;
     }
@@ -90,6 +93,7 @@ public class Narasumber {
         this.perusahaan = perusahaan;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return "{" +
@@ -103,4 +107,6 @@ public class Narasumber {
             ", perusahaan='" + getPerusahaan() + "'" +
             "}";
     }
+=======
+>>>>>>> 72eab9bbdb3f417467008d5b95ebec58348b1535
 }
