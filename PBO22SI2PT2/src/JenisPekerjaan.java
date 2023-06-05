@@ -19,7 +19,6 @@ public class JenisPekerjaan {
         this.gaji = gaji;
     }
 
-
     public String getNama_perusahaan() {
         return this.nama_perusahaan;
     }
@@ -59,16 +58,16 @@ public class JenisPekerjaan {
     public void setGaji(String gaji) {
         this.gaji = gaji;
     }
-    
+
     @Override
     public String toString() {
         return "{" +
-            " nama_perusahaan='" + getNama_perusahaan() + "'" +
-            ", alamat_perusahaan='" + getAlamat_perusahaan() + "'" +
-            ", pekerjaan_yang_ditawarkan='" + getPekerjaan_yang_ditawarkan() + "'" +
-            ", kriteria='" + getKriteria() + "'" +
-            ", gaji='" + getGaji() + "'" +
-            "}";
+                " nama_perusahaan='" + getNama_perusahaan() + "'" +
+                ", alamat_perusahaan='" + getAlamat_perusahaan() + "'" +
+                ", pekerjaan_yang_ditawarkan='" + getPekerjaan_yang_ditawarkan() + "'" +
+                ", kriteria='" + getKriteria() + "'" +
+                ", gaji='" + getGaji() + "'" +
+                "}";
     }
 
-} 
+}
