@@ -7,6 +7,7 @@ public class Pekerja {
     private String nomor_handphone;
     private String alamat;
 
+    
     public Pekerja (){
 
     }
