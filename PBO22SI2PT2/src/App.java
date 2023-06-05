@@ -23,6 +23,10 @@ public class App {
         Narasumber andi = new Narasumber("andi", "laki laki", "22", "andi@gmail.com", "0834871249214", "S1", "HR Manager", "Aryaduta");
         Narasumber budi = new Narasumber("budi", "laki laki", "22", "budi@gmail.com", "0874214788", "S1", "HR Manager", "Adimulia");
         Narasumber anisa = new Narasumber("Anisa", "perempuan", "23", "Anisa@gmail.com", "0821838129738", "S1", "Founder", "Shihlin");
+
+        JenisPekerjaan dokter = new JenisPekerjaan("321", "laki-laki", "0851274638", "jl uph no 2 blok m");
+        JenisPekerjaan karyawan = new JenisPekerjaan("123", "laki-laki", "085381633", "jl murai no 2 blok 1");
+        JenisPekerjaan koki = new JenisPekerjaan("126", "laki-laki", "082739264", "cemara garuda no 3");
     }
     }   
 =======
