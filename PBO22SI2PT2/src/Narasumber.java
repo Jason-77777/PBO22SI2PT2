@@ -11,6 +11,24 @@ public class Narasumber {
     private String jabatan;
     private String perusahaan;
 
+<<<<<<< HEAD
+    public Narasumber (){
+        
+    }
+    
+    public Narasumber(String nama, String jenis_kelamin, String usia, String email, String nomor_telepon, String lulusan, String jabatan, String perusahaan) {
+        this.nama = nama;
+        this.jenis_kelamin = jenis_kelamin;
+        this.usia = usia;
+        this.email = email;
+        this.nomor_telepon = nomor_telepon;
+        this.lulusan = lulusan;
+        this.jabatan = jabatan;
+        this.perusahaan = perusahaan;
+    }
+
+=======
+>>>>>>> 72eab9bbdb3f417467008d5b95ebec58348b1535
     public String getNama() {
         return this.nama;
     }
@@ -75,4 +93,20 @@ public class Narasumber {
         this.perusahaan = perusahaan;
     }
 
+<<<<<<< HEAD
+    @Override
+    public String toString() {
+        return "{" +
+            " nama='" + getNama() + "'" +
+            ", jenis_kelamin='" + getJenis_kelamin() + "'" +
+            ", usia='" + getUsia() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", nomor_telepon='" + getNomor_telepon() + "'" +
+            ", lulusan='" + getLulusan() + "'" +
+            ", jabatan='" + getJabatan() + "'" +
+            ", perusahaan='" + getPerusahaan() + "'" +
+            "}";
+    }
+=======
+>>>>>>> 72eab9bbdb3f417467008d5b95ebec58348b1535
 }
