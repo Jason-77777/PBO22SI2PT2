@@ -7,7 +7,17 @@ public class Pekerja {
     private String nomor_handphone;
     private String alamat;
 
+    
+    public Pekerja (){
 
+    }
+
+    public Pekerja(String nama_Id, String biodata, String nomor_handphone, String alamat){
+        this.nama_Id = nama_Id;
+        this.biodata = biodata;
+        this.nomor_handphone = nomor_handphone;
+        this.alamat= alamat;
+    }
     public String getNama_Id() {
         return this.nama_Id;
     }
@@ -38,6 +48,17 @@ public class Pekerja {
 
     public void setAlamat(String alamat) {
         this.alamat = alamat;
+    }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " nama_Id='" + getNama_Id() + "'" +
+            ", biodata='" + getBiodata() + "'" +
+            ", nomor_handphone='" + getNomor_handphone() + "'" +
+            ", alamat='" + getAlamat() + "'" +
+            "}";
     }
 
 }
