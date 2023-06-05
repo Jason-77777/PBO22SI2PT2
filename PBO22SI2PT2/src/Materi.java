@@ -9,7 +9,19 @@ public class Materi {
     private String jenis;
     private String latihan;
 
+    //konstruktor all field
+    public Materi(String pertemuan, String kurikulum, String jenis, String latihan) {
+        this.pertemuan = pertemuan;
+        this.kurikulum = kurikulum;
+        this.jenis = jenis;
+        this.latihan = latihan;
+    }
 
+    //konstruktur empty
+    public Materi (){
+
+    }
+    
     public String getPertemuan() {
         return this.pertemuan;
     }
@@ -42,9 +54,18 @@ public class Materi {
         this.latihan = latihan;
     }
 
-}
 
-    
+    //metode to string
+    @Override
+    public String toString() {
+        return "{" +
+            " pertemuan='" + getPertemuan() + "'" +
+            ", kurikulum='" + getKurikulum() + "'" +
+            ", jenis='" + getJenis() + "'" +
+            ", latihan='" + getLatihan() + "'" +
+            "}";
+    }
+}
 
 
     
