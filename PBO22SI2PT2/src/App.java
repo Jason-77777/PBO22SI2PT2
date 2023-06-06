@@ -28,6 +28,9 @@ public class App {
         JenisPekerjaan karyawan = new JenisPekerjaan("123", "laki-laki", "085381633", "jl murai no 2 blok 1");
         JenisPekerjaan koki = new JenisPekerjaan("126", "laki-laki", "082739264", "cemara garuda no 3");
 
+        Perusahaan google = new Perusahaan("google", "jl multatuli no 1", "30", "10");
+        Perusahaan jaya = new Perusahaan("jaya", "jl wahidin no 2", "25", "12");
+        Perusahaan abadi = new Perusahaan("abadi", "jl diponegoro no 3", "40", "15")
         
     }
 
