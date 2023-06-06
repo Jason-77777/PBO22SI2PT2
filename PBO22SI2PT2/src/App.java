@@ -27,7 +27,10 @@ public class App {
         JenisPekerjaan dokter = new JenisPekerjaan("321", "laki-laki", "0851274638", "jl uph no 2 blok m");
         JenisPekerjaan karyawan = new JenisPekerjaan("123", "laki-laki", "085381633", "jl murai no 2 blok 1");
         JenisPekerjaan koki = new JenisPekerjaan("126", "laki-laki", "082739264", "cemara garuda no 3");
+
+        
     }
+
     }   
 =======
 
