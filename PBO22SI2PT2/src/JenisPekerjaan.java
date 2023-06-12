@@ -19,7 +19,8 @@ public class JenisPekerjaan {
         this.gaji = gaji;
     }
 
-    
+
+
 
     public String getNama_perusahaan() {
         return this.nama_perusahaan;
