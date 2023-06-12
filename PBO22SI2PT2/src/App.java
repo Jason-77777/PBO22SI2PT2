@@ -8,6 +8,8 @@ public class App {
         System.out.println("3. Fitur Training");
         System.out.println("4. Fitur Pencarian Pekerjaan");
         System.out.println("5. Pesan dan Notifikasi");
+
+        init();
     }
     public static void init(){
         System.out.println("data");
