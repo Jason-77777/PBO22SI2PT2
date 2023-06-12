@@ -9,7 +9,6 @@ public class App {
         System.out.println("4. Fitur Pencarian Pekerjaan");
         System.out.println("5. Pesan dan Notifikasi");
     }
-<<<<<<< Updated upstream
     public static void init(){
         System.out.println("data");
         Pekerja john = new Pekerja("321", "laki-laki", "0851274638", "jl uph no 2 blok m");
@@ -24,14 +23,9 @@ public class App {
         Narasumber budi = new Narasumber("budi", "laki laki", "22", "budi@gmail.com", "0874214788", "S1", "HR Manager", "Adimulia");
         Narasumber anisa = new Narasumber("Anisa", "perempuan", "23", "Anisa@gmail.com", "0821838129738", "S1", "Founder", "Shihlin");
 
-        JenisPekerjaan dokter = new JenisPekerjaan();
-        JenisPekerjaan karyawan = new JenisPekerjaan();
-        JenisPekerjaan koki = new JenisPekerjaan();  
+        JenisPekerjaan dokter = new JenisPekerjaan("PT Sehat Abadi", "Jln Apel", "Dokter Umum", "S1 Kedokteran", "Rp.10,000,000");
+        JenisPekerjaan karyawan = new JenisPekerjaan("CV Maju Jaya", "Jln Mangga", "Karyawan Toko", "SMA/Sederajat", "Rp.3,000,000");
+        JenisPekerjaan koki = new JenisPekerjaan("CV Sedap Wangi", "Jln Pisang", "Head Chef", "S1 Pariwisata", "Rp.5,000,000");
     }
-    }   
-=======
+}   
 
-    
-    
->>>>>>> Stashed changes
-}
