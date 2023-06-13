@@ -8,6 +8,7 @@ public class Perusahaan {
     
     public Perusahaan() {
     }
+    
     public Perusahaan(String nama_perusahaan, String alamat_perusahaan, String pekerja, String investor){
         this.nama_perusahaan = nama_perusahaan;
         this.alamat_perusahaan = alamat_perusahaan;
