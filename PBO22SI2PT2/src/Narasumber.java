@@ -3,10 +3,10 @@
 
 public class Narasumber {
     private String nama;
-    private String jenis_kelamin;
+    private String jenisKelamin;
     private String usia;
     private String email;
-    private String nomor_telepon;
+    private String nomorTelepon;
     private String lulusan;
     private String jabatan;
     private String perusahaan;
@@ -16,12 +16,12 @@ public class Narasumber {
         
     }
     
-    public Narasumber(String nama, String jenis_kelamin, String usia, String email, String nomor_telepon, String lulusan, String jabatan, String perusahaan) {
+    public Narasumber(String nama, String jenisKelamin, String usia, String email, String nomorTelepon, String lulusan, String jabatan, String perusahaan) {
         this.nama = nama;
-        this.jenis_kelamin = jenis_kelamin;
+        this.jenisKelamin = jenisKelamin;
         this.usia = usia;
         this.email = email;
-        this.nomor_telepon = nomor_telepon;
+        this.nomorTelepon = nomorTelepon;
         this.lulusan = lulusan;
         this.jabatan = jabatan;
         this.perusahaan = perusahaan;
@@ -36,12 +36,12 @@ public class Narasumber {
         this.nama = nama;
     }
 
-    public String getJenis_kelamin() {
-        return this.jenis_kelamin;
+    public String getJenisKelamin() {
+        return this.jenisKelamin;
     }
 
-    public void setJenis_kelamin(String jenis_kelamin) {
-        this.jenis_kelamin = jenis_kelamin;
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
     }
 
     public String getUsia() {
@@ -60,12 +60,12 @@ public class Narasumber {
         this.email = email;
     }
 
-    public String getNomor_telepon() {
-        return this.nomor_telepon;
+    public String getNomorTelepon() {
+        return this.nomorTelepon;
     }
 
-    public void setNomor_telepon(String nomor_telepon) {
-        this.nomor_telepon = nomor_telepon;
+    public void setNomorTelepon(String nomorTelepon) {
+        this.nomorTelepon = nomorTelepon;
     }
 
     public String getLulusan() {
@@ -97,10 +97,10 @@ public class Narasumber {
     public String toString() {
         return "{" +
             " nama='" + getNama() + "'" +
-            ", jenis_kelamin='" + getJenis_kelamin() + "'" +
+            ", jenis_kelamin='" + getJenisKelamin() + "'" +
             ", usia='" + getUsia() + "'" +
             ", email='" + getEmail() + "'" +
-            ", nomor_telepon='" + getNomor_telepon() + "'" +
+            ", nomor_telepon='" + getNomorTelepon() + "'" +
             ", lulusan='" + getLulusan() + "'" +
             ", jabatan='" + getJabatan() + "'" +
             ", perusahaan='" + getPerusahaan() + "'" +
