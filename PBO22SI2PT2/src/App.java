@@ -12,7 +12,7 @@ public class App {
 
         System.out.println("Menu utama :");
         System.out.println("1. Fitur Profile Pekerja dan Perusahaan");
-        System.out.println("2. Fitur Chat");
+        System.out.println("2. Fitur Rekomendasi Pekerjaan");
         System.out.println("3. Fitur Training");
         System.out.println("4. Fitur Pencarian Pekerjaan");
         System.out.println("5. Pesan dan Notifikasi");
@@ -62,9 +62,6 @@ public class App {
         Perusahaan CAB = new Perusahaan("CAB", "jl adam malik no 2 medan", "30 orang", "pt sinar abadi");
         Perusahaan MOBILTERBANG = new Perusahaan("MOBILTERBANG", "mangga 2 jakarta", "150 orang", "tidak ada");
         Perusahaan PTtrans = new Perusahaan("PTtrans", "jl mongolia blok g", "50 orang", "pt jepang cahaya asia");
-    
-    
-    
     
     }
 
