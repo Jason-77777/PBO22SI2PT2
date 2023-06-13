@@ -2,9 +2,9 @@
 // isinya adalah data yang menyangkut pekerja seperti data diri, alamat, dll
 
 public class Pekerja {
-    private String nama_Id;
+    private String namaId;
     private String biodata;
-    private String nomor_handphone;
+    private String nomorHandphone;
     private String alamat;
 
     public Pekerja (){
@@ -12,19 +12,19 @@ public class Pekerja {
     }
 
 
-    public Pekerja(String nama_Id, String biodata, String nomor_handphone, String alamat) {
-        this.nama_Id = nama_Id;
+    public Pekerja(String namaId, String biodata, String nomorHandphone, String alamat) {
+        this.namaId = namaId;
         this.biodata = biodata;
-        this.nomor_handphone = nomor_handphone;
+        this.nomorHandphone = nomorHandphone;
         this.alamat = alamat;
     }
 
-    public String getNama_Id() {
-        return this.nama_Id;
+    public String getNamaId() {
+        return this.namaId;
     }
 
-    public void setNama_Id(String nama_Id) {
-        this.nama_Id = nama_Id;
+    public void setNamaId(String namaId) {
+        this.namaId = namaId;
     }
 
     public String getBiodata() {
@@ -35,12 +35,12 @@ public class Pekerja {
         this.biodata = biodata;
     }
 
-    public String getNomor_handphone() {
-        return this.nomor_handphone;
+    public String getNomorHandphone() {
+        return this.nomorHandphone;
     }
 
-    public void setNomor_handphone(String nomor_handphone) {
-        this.nomor_handphone = nomor_handphone;
+    public void setNomorHandphone(String nomorHandphone) {
+        this.nomorHandphone = nomorHandphone;
     }
 
     public String getAlamat() {
@@ -55,9 +55,9 @@ public class Pekerja {
     @Override
     public String toString() {
         return "{" +
-            " nama_Id='" + getNama_Id() + "'" +
+            " nama_Id='" + getNamaId() + "'" +
             ", biodata='" + getBiodata() + "'" +
-            ", nomor_handphone='" + getNomor_handphone() + "'" +
+            ", nomor_handphone='" + getNomorHandphone() + "'" +
             ", alamat='" + getAlamat() + "'" +
             "}";
     }

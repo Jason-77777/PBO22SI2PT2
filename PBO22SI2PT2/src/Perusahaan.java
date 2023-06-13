@@ -1,37 +1,37 @@
 //Perusahaan adalah sebuah badan usaha yang tetap dan didirikan oleh manusia yang bertujuan mencari laba atau keuntungan
 
 public class Perusahaan {
-    private String nama_perusahaan;
-    private String alamat_perusahaan;
+    private String namaPerusahaan;
+    private String alamatPerusahaan;
     private String pekerja;
     private String investor;
     
     public Perusahaan() {
     }
     
-    public Perusahaan(String nama_perusahaan, String alamat_perusahaan, String pekerja, String investor){
-        this.nama_perusahaan = nama_perusahaan;
-        this.alamat_perusahaan = alamat_perusahaan;
+    public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String pekerja, String investor){
+        this.namaPerusahaan = namaPerusahaan;
+        this.alamatPerusahaan = alamatPerusahaan;
         this.pekerja = pekerja;
         this.investor = investor;
     }
     
-    public String getNama_perusahaan() {
-        return this.nama_perusahaan;
+    public String getNamaPerusahaan() {
+        return this.namaPerusahaan;
     }
 
-    public void setNama_perusahaan(String nama_perusahaan) {
-        this.nama_perusahaan = nama_perusahaan;
+    public void setNamaPerusahaan(String namaPerusahaan) {
+        this.namaPerusahaan = namaPerusahaan;
     }
 
-    public String getAlamat_perusahaan() {
-        return this.alamat_perusahaan;
+    public String getAlamatPerusahaan() {
+        return this.alamatPerusahaan;
     }
 
-    public void setAlamat_perusahaan(String alamat_perusahaan) {
+    public void setAlamatPerusahaan(String alamatPerusahaan) {
 
     
-        this.alamat_perusahaan = alamat_perusahaan;
+        this.alamatPerusahaan = alamatPerusahaan;
     }
 
     public String getPekerja() {
@@ -54,8 +54,8 @@ public class Perusahaan {
     @Override
     public String toString() {
         return "{" +
-            " nama_perusahaan='" + getNama_perusahaan() + "'" +
-            ", alamat_perusahaan='" + getAlamat_perusahaan() + "'" +
+            " nama_perusahaan='" + getNamaPerusahaan() + "'" +
+            ", alamat_perusahaan='" + getAlamatPerusahaan() + "'" +
             ", pekerja='" + getPekerja() + "'" +
             ", investor='" + getInvestor() + "'" +
             "}";
