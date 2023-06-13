@@ -1,13 +1,45 @@
 // Ini merupakan file utama untuk menjalankan program yang kita buat
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+
+        int pilihan;
+        boolean kondisi;
+
+        Scanner input = new Scanner(System.in);
+
         System.out.println("Menu utama :");
         System.out.println("1. Fitur Profile Pekerja dan Perusahaan");
         System.out.println("2. Fitur Chat");
         System.out.println("3. Fitur Training");
         System.out.println("4. Fitur Pencarian Pekerjaan");
         System.out.println("5. Pesan dan Notifikasi");
+        System.out.print("Pilihan : ");
+        pilihan = input.nextInt();
+
+        System.out.println("-----------------------");
+
+        switch (pilihan) {
+            case 1:
+                System.out.println("Fitur Profile Pekerja dan Perusahaan");
+                break;
+            case 2:
+                System.out.println("Fitur Chat");
+                break;
+            case 3:
+                System.out.println("Fitur Training");
+                break;
+            case 4:
+                System.out.println("Fitur Pencarian Pekerjaan");
+                break;
+            case 5:
+                System.out.println("Pesan dan Notifikasi");
+                break;
+        
+
+        }
     }
     public static void init(){
         System.out.println("data");
