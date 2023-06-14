@@ -3,12 +3,13 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         int pilihan;
-        boolean kondisi;
 
         Scanner input = new Scanner(System.in);
+
+        init();
 
         System.out.println("Menu utama :");
         System.out.println("1. Fitur Profile Pekerja dan Perusahaan");
@@ -23,27 +24,29 @@ public class App {
 
         switch (pilihan) {
             case 1:
-                System.out.println("Fitur Profile Pekerja dan Perusahaan");
+                System.out.println("Profile Pekerja dan Perusahaan");
                 break;
             case 2:
-                System.out.println("Fitur Chat");
+                System.out.println("Chat");
                 break;
             case 3:
-                System.out.println("Fitur Training");
+                System.out.println("Training");
                 break;
             case 4:
-                System.out.println("Fitur Pencarian Pekerjaan");
+                System.out.println("Pencarian Pekerjaan");
                 break;
             case 5:
                 System.out.println("Pesan dan Notifikasi");
                 break;
         }
+
+
     }
     public static void init(){
-        System.out.println("data");
-        Pekerja john = new Pekerja("321", "laki-laki", "0851274638", "jl uph no 2 blok m");
-        Pekerja jim = new Pekerja("123", "laki-laki", "085381633", "jl murai no 2 blok 1");
-        Pekerja jack = new Pekerja("126", "laki-laki", "082739264", "cemara garuda no 3");
+
+        Pekerja john = new Pekerja("321", "laki-laki", "085127463845", "jl uph no 2 blok m");
+        Pekerja jim = new Pekerja("123", "laki-laki", "085381633467", "jl murai no 2 blok 1");
+        Pekerja jack = new Pekerja("126", "laki-laki", "082739264789", "cemara garuda no 3");
         
         Materi pertama = new Materi("123", "2023", "latihan", "permulaan");
         Materi kedua = new Materi("234", "2023", "workshop", "advance");
