@@ -37,8 +37,6 @@ public class App {
             case 5:
                 System.out.println("Pesan dan Notifikasi");
                 break;
-        
-
         }
     }
     public static void init(){
