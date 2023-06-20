@@ -7,6 +7,7 @@ public class Perusahaan {
     private String investor;
     
     public Perusahaan() {
+        
     }
     
     public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String pekerja, String investor){
