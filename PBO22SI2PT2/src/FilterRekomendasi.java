@@ -2,13 +2,13 @@ public class FilterRekomendasi {
     private String usia;
     private String jenisKelamin;
     private String gajiYangDiinginkan;
-    private String jenisPekerjaan;
+    private String jenis;
     private String namaPerusahaan;
     private String lokasi;
     private String lulusan;
 
     private Perusahaan perusahaan;
-    
+
     public FilterRekomendasi(){
 
     }
@@ -26,11 +26,12 @@ public class FilterRekomendasi {
     }
 
 
-    public FilterRekomendasi(String usia, String jenisKelamin, String gajiYangDiinginkan, String jenisPekerjaan, String namaPerusahaan, String lokasi, String lulusan) {
+
+    public FilterRekomendasi(String usia, String jenisKelamin, String gajiYangDiinginkan, String jenis, String namaPerusahaan, String lokasi, String lulusan) {
         this.usia = usia;
         this.jenisKelamin = jenisKelamin;
         this.gajiYangDiinginkan = gajiYangDiinginkan;
-        this.jenisPekerjaan = jenisPekerjaan;
+        this.jenis = jenis;
         this.namaPerusahaan = namaPerusahaan;
         this.lokasi = lokasi;
         this.lulusan = lulusan;
@@ -60,12 +61,12 @@ public class FilterRekomendasi {
         this.gajiYangDiinginkan = gajiYangDiinginkan;
     }
 
-    public String getJenisPekerjaan() {
-        return this.jenisPekerjaan;
+    public String getJenis() {
+        return this.jenis;
     }
 
-    public void setJenisPekerjaan(String jenisPekerjaan) {
-        this.jenisPekerjaan = jenisPekerjaan;
+    public void setJenisPekerjaan(String jenis) {
+        this.jenis = jenis;
     }
 
     public String getNamaPerusahaan() {
@@ -99,7 +100,7 @@ public class FilterRekomendasi {
             " usia='" + getUsia() + "'" +
             ", jenisKelamin='" + getJenisKelamin() + "'" +
             ", gajiYangDiinginkan='" + getGajiYangDiinginkan() + "'" +
-            ", jenisPekerjaan='" + getJenisPekerjaan() + "'" +
+            ", jenis='" + getJenis() + "'" +
             ", namaPerusahaan='" + getNamaPerusahaan() + "'" +
             ", lokasi='" + getLokasi() + "'" +
             ", lulusan='" + getLulusan() + "'" +
