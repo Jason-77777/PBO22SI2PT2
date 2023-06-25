@@ -7,25 +7,9 @@ public class FilterRekomendasi {
     private String lokasi;
     private String lulusan;
 
-    private Perusahaan perusahaan;
-
     public FilterRekomendasi(){
 
     }
-
-    public FilterRekomendasi(Perusahaan perusahaan){
-        this.perusahaan = perusahaan;
-    }
-
-    public Perusahaan getPerusahaan() {
-        return this.perusahaan;
-    }
-
-    public void setPerusahaan(Perusahaan perusahaan) {
-        this.perusahaan = perusahaan;
-    }
-
-
 
     public FilterRekomendasi(String usia, String jenisKelamin, String gajiYangDiinginkan, String jenis, String namaPerusahaan, String lokasi, String lulusan) {
         this.usia = usia;

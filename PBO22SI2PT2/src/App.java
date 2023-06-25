@@ -1,5 +1,3 @@
-// Ini merupakan file utama untuk menjalankan program yang kita buat
-
 import java.util.Scanner;
 
 public class App {
