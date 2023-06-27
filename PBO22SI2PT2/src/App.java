@@ -83,12 +83,7 @@ public class App {
                 System.out.println("----------------------------------");
                 System.out.println("Jenis Pekerjaan Yang Ditawarkan :");
 
-                JenisPekerjaan dokter = new JenisPekerjaan("PT Sehat Abadi", "Jln Apel", "Dokter Umum", "S1 Kedokteran", "Rp.10,000,000");
-                System.out.println(dokter);
-                JenisPekerjaan karyawan = new JenisPekerjaan("CV Maju Jaya", "Jln Mangga", "Karyawan Toko", "SMA/Sederajat", "Rp.3,000,000");
-                System.out.println(karyawan);
-                JenisPekerjaan koki = new JenisPekerjaan("CV Sedap Wangi", "Jln Pisang", "Head Chef", "S1 Pariwisata", "Rp.5,000,000");
-                System.out.println(koki);
+                
                 break;
             case 5:
                 System.out.println("Pesan dan Notifikasi");
@@ -109,9 +104,7 @@ public class App {
         Narasumber budi = new Narasumber("budi", "laki laki", "22", "budi@gmail.com", "0874214788", "S1", "HR Manager", "Adimulia");
         Narasumber anisa = new Narasumber("Anisa", "perempuan", "23", "Anisa@gmail.com", "0821838129738", "S1", "Founder", "Shihlin");
 
-        JenisPekerjaan dokter = new JenisPekerjaan("PT Sehat Abadi", "Jln Apel", "Dokter Umum", "S1 Kedokteran", "Rp.10,000,000");
-        JenisPekerjaan karyawan = new JenisPekerjaan("CV Maju Jaya", "Jln Mangga", "Karyawan Toko", "SMA/Sederajat", "Rp.3,000,000");
-        JenisPekerjaan koki = new JenisPekerjaan("CV Sedap Wangi", "Jln Pisang", "Head Chef", "S1 Pariwisata", "Rp.5,000,000");
+    
 
         Perusahaan CAB = new Perusahaan("CAB", "jl adam malik no 2 medan", "30 orang", "pt sinar abadi");
         Perusahaan MOBILTERBANG = new Perusahaan("MOBILTERBANG", "mangga 2 jakarta", "150 orang", "tidak ada");
