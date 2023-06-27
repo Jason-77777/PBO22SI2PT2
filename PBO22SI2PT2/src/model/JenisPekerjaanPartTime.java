@@ -1,5 +1,5 @@
 package model;
 
-public class JenisPekerjaanPartTime {
+public class JenisPekerjaanPartTime extends JenisPekerjaan{
     
 }

@@ -2,45 +2,49 @@
 // isinya adalah data yang menyangkut pekerja seperti data diri, alamat, dll
 
 public class Pekerja {
-    private String namaId;
-    private String biodata;
-    private String nomorHandphone;
+
+    private String nama;
+    private String usia;
+    private String jenisKelamin;
     private String alamat;
+    private String nomorHP;
+    private String lulusan;
 
     public Pekerja (){
 
     }
 
-
-    public Pekerja(String namaId, String biodata, String nomorHandphone, String alamat) {
-        this.namaId = namaId;
-        this.biodata = biodata;
-        this.nomorHandphone = nomorHandphone;
+    public Pekerja(String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String lulusan) {
+        this.nama = nama;
+        this.usia = usia;
+        this.jenisKelamin = jenisKelamin;
         this.alamat = alamat;
+        this.nomorHP = nomorHP;
+        this.lulusan = lulusan;
     }
 
-    public String getNamaId() {
-        return this.namaId;
+    public String getNama() {
+        return this.nama;
     }
 
-    public void setNamaId(String namaId) {
-        this.namaId = namaId;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public String getBiodata() {
-        return this.biodata;
+    public String getUsia() {
+        return this.usia;
     }
 
-    public void setBiodata(String biodata) {
-        this.biodata = biodata;
+    public void setUsia(String usia) {
+        this.usia = usia;
     }
 
-    public String getNomorHandphone() {
-        return this.nomorHandphone;
+    public String getJenisKelamin() {
+        return this.jenisKelamin;
     }
 
-    public void setNomorHandphone(String nomorHandphone) {
-        this.nomorHandphone = nomorHandphone;
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
     }
 
     public String getAlamat() {
@@ -51,15 +55,31 @@ public class Pekerja {
         this.alamat = alamat;
     }
 
+    public String getNomorHP() {
+        return this.nomorHP;
+    }
+
+    public void setNomorHP(String nomorHP) {
+        this.nomorHP = nomorHP;
+    }
+
+    public String getLulusan() {
+        return this.lulusan;
+    }
+
+    public void setLulusan(String lulusan) {
+        this.lulusan = lulusan;
+    }
 
     @Override
     public String toString() {
         return "{" +
-            " nama_Id='" + getNamaId() + "'" +
-            ", biodata='" + getBiodata() + "'" +
-            ", nomor_handphone='" + getNomorHandphone() + "'" +
+            " nama='" + getNama() + "'" +
+            ", usia='" + getUsia() + "'" +
+            ", jenisKelamin='" + getJenisKelamin() + "'" +
             ", alamat='" + getAlamat() + "'" +
+            ", nomorHP='" + getNomorHP() + "'" +
+            ", lulusan='" + getLulusan() + "'" +
             "}";
     }
-
 }

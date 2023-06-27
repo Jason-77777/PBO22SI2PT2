@@ -1,6 +1,6 @@
 // Class ini adalah untuk menampung semua data mengenai jenis pekerjaan
 
-public class JenisPekerjaan {
+public abstract class JenisPekerjaan {
 
     private String namaPerusahaan;
     private String alamatPerusahaan;
