@@ -4,22 +4,19 @@ public class JenisPekerjaan {
 
     private String namaPerusahaan;
     private String alamatPerusahaan;
-    private String pekerjaanYangDitawarkan;
-    private String kriteria;
-    private String gaji;
+    private String JenisPekerjaanFulllTime;
+    private String JenisPekerjaanPartTime;
 
     public JenisPekerjaan() {
     }
 
-    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String pekerjaanYangDitawarkan, String kriteria, String gaji) {
+
+    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String JenisPekerjaanFulllTime, String JenisPekerjaanPartTime) {
         this.namaPerusahaan = namaPerusahaan;
         this.alamatPerusahaan = alamatPerusahaan;
-        this.pekerjaanYangDitawarkan = pekerjaanYangDitawarkan;
-        this.kriteria = kriteria;
-        this.gaji = gaji;
+        this.JenisPekerjaanFulllTime = JenisPekerjaanFulllTime;
+        this.JenisPekerjaanPartTime = JenisPekerjaanPartTime;
     }
-
-
 
 
     public String getNamaPerusahaan() {
@@ -38,39 +35,31 @@ public class JenisPekerjaan {
         this.alamatPerusahaan = alamatPerusahaan;
     }
 
-    public String getPekerjaanYangDitawarkan() {
-        return this.pekerjaanYangDitawarkan;
+    public String getJenisPekerjaanFulllTime() {
+        return this.JenisPekerjaanFulllTime;
     }
 
-    public void setPekerjaanYangDitawarkan(String pekerjaanYangDitawarkan) {
-        this.pekerjaanYangDitawarkan = pekerjaanYangDitawarkan;
+    public void setJenisPekerjaanFulllTime(String JenisPekerjaanFulllTime) {
+        this.JenisPekerjaanFulllTime = JenisPekerjaanFulllTime;
     }
 
-    public String getKriteria() {
-        return this.kriteria;
+    public String getJenisPekerjaanPartTime() {
+        return this.JenisPekerjaanPartTime;
     }
 
-    public void setKriteria(String kriteria) {
-        this.kriteria = kriteria;
+    public void setJenisPekerjaanPartTime(String JenisPekerjaanPartTime) {
+        this.JenisPekerjaanPartTime = JenisPekerjaanPartTime;
     }
-
-    public String getGaji() {
-        return this.gaji;
-    }
-
-    public void setGaji(String gaji) {
-        this.gaji = gaji;
-    }
-
+    
     @Override
     public String toString() {
         return "{" +
-                " nama_perusahaan='" + getNamaPerusahaan() + "'" +
-                ", alamat_perusahaan='" + getAlamatPerusahaan() + "'" +
-                ", pekerjaan_yang_ditawarkan='" + getPekerjaanYangDitawarkan() + "'" +
-                ", kriteria='" + getKriteria() + "'" +
-                ", gaji='" + getGaji() + "'" +
-                "}";
+            " namaPerusahaan='" + getNamaPerusahaan() + "'" +
+            ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
+            ", JenisPekerjaanFulllTime='" + getJenisPekerjaanFulllTime() + "'" +
+            ", JenisPekerjaanPartTime='" + getJenisPekerjaanPartTime() + "'" +
+            "}";
     }
+    
 
 }
