@@ -1,21 +1,17 @@
-// Class ini adalah untuk menampung semua data mengenai jenis pekerjaan
+package model;
 
-public class JenisPekerjaan {
+public abstract class JenisPekerjaan {
 
     private String namaPerusahaan;
     private String alamatPerusahaan;
-    private String tipePekerjaanFullTime;
+    private String tipePekerjaanFulllTime;
     private String tipePekerjaanPartTime;
 
 
-    public JenisPekerjaan() {
-    }
-
-
-    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String tipePekerjaanFullTime, String tipePekerjaanPartTime) {
+    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String tipePekerjaanFulllTime, String tipePekerjaanPartTime) {
         this.namaPerusahaan = namaPerusahaan;
         this.alamatPerusahaan = alamatPerusahaan;
-        this.tipePekerjaanFullTime = tipePekerjaanFullTime;
+        this.tipePekerjaanFulllTime = tipePekerjaanFulllTime;
         this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
@@ -36,12 +32,12 @@ public class JenisPekerjaan {
         this.alamatPerusahaan = alamatPerusahaan;
     }
 
-    public String getTipePekerjaanFullTime() {
-        return this.tipePekerjaanFullTime;
+    public String getTipePekerjaanFulllTime() {
+        return this.tipePekerjaanFulllTime;
     }
 
-    public void setTipePekerjaanFullTime(String tipePekerjaanFullTime) {
-        this.tipePekerjaanFullTime = tipePekerjaanFullTime;
+    public void setTipePekerjaanFulllTime(String tipePekerjaanFulllTime) {
+        this.tipePekerjaanFulllTime = tipePekerjaanFulllTime;
     }
 
     public String getTipePekerjaanPartTime() {
@@ -52,16 +48,16 @@ public class JenisPekerjaan {
         this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
+
     @Override
     public String toString() {
         return "{" +
             " namaPerusahaan='" + getNamaPerusahaan() + "'" +
             ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
-            ", tipePekerjaanFullTime='" + getTipePekerjaanFullTime() + "'" +
+            ", tipePekerjaanFulllTime='" + getTipePekerjaanFulllTime() + "'" +
             ", tipePekerjaanPartTime='" + getTipePekerjaanPartTime() + "'" +
             "}";
     }
 
 
-    
 }
