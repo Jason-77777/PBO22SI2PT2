@@ -15,7 +15,6 @@ public class Pekerja {
 
     }
 
-
     public Pekerja(String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
         this.nama = nama;
         this.usia = usia;

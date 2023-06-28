@@ -105,9 +105,9 @@ public class App {
         Perusahaan MOBILTERBANG = new Perusahaan("MOBILTERBANG", "mangga 2 jakarta", "150 orang", "tidak ada");
         Perusahaan PTtrans = new Perusahaan("PTtrans", "jl mongolia blok g", "50 orang", "pt jepang cahaya asia");
     
-        FilterRekomendasi filterPertama = new FilterRekomendasi("20-30 tahun", "laki-laki", "2-3 juta rupiah", "satpam", "pt unta terbang", "medan", "minimal tamatan SMA");
-        FilterRekomendasi filterKedua = new FilterRekomendasi("25-35", "perempuan", "5-10 juta rupiah", "sekretaris", "pt oGoT", "sby", "minimal tamatan S1");
-        FilterRekomendasi filterKetiga = new FilterRekomendasi("20-40", "laki-laki dan perempuan", "4-7 juta rupiah", "accountant", "cv indah kusuma", "medan", "minimal tamatan S1");
+        FilterRekomendasi filterPertama = new FilterRekomendasi();
+        FilterRekomendasi filterKedua = new FilterRekomendasi();
+        FilterRekomendasi filterKetiga = new FilterRekomendasi();
     
 
 }   

@@ -2,24 +2,24 @@ public class FilterRekomendasi {
     private String usia;
     private String jenisKelamin;
     private String gajiYangDiinginkan;
-    private String jenis;
-    private String namaPerusahaan;
+    private String jenisPekerjaan;
     private String lokasi;
     private String lulusan;
 
-    public FilterRekomendasi(){
 
+    public FilterRekomendasi() {
     }
 
-    public FilterRekomendasi(String usia, String jenisKelamin, String gajiYangDiinginkan, String jenis, String namaPerusahaan, String lokasi, String lulusan) {
+
+    public FilterRekomendasi(String usia, String jenisKelamin, String gajiYangDiinginkan, String jenisPekerjaan, String lokasi, String lulusan) {
         this.usia = usia;
         this.jenisKelamin = jenisKelamin;
         this.gajiYangDiinginkan = gajiYangDiinginkan;
-        this.jenis = jenis;
-        this.namaPerusahaan = namaPerusahaan;
+        this.jenisPekerjaan = jenisPekerjaan;
         this.lokasi = lokasi;
         this.lulusan = lulusan;
     }
+
 
     public String getUsia() {
         return this.usia;
@@ -45,20 +45,12 @@ public class FilterRekomendasi {
         this.gajiYangDiinginkan = gajiYangDiinginkan;
     }
 
-    public String getJenis() {
-        return this.jenis;
+    public String getJenisPekerjaan() {
+        return this.jenisPekerjaan;
     }
 
-    public void setJenisPekerjaan(String jenis) {
-        this.jenis = jenis;
-    }
-
-    public String getNamaPerusahaan() {
-        return this.namaPerusahaan;
-    }
-
-    public void setNamaPerusahaan(String namaPerusahaan) {
-        this.namaPerusahaan = namaPerusahaan;
+    public void setJenisPekerjaan(String jenisPekerjaan) {
+        this.jenisPekerjaan = jenisPekerjaan;
     }
 
     public String getLokasi() {
@@ -84,11 +76,10 @@ public class FilterRekomendasi {
             " usia='" + getUsia() + "'" +
             ", jenisKelamin='" + getJenisKelamin() + "'" +
             ", gajiYangDiinginkan='" + getGajiYangDiinginkan() + "'" +
-            ", jenis='" + getJenis() + "'" +
-            ", namaPerusahaan='" + getNamaPerusahaan() + "'" +
+            ", jenisPekerjaan='" + getJenisPekerjaan() + "'" +
             ", lokasi='" + getLokasi() + "'" +
             ", lulusan='" + getLulusan() + "'" +
             "}";
     }
-
+    
 }

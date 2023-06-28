@@ -3,20 +3,22 @@
 public class Perusahaan {
     private String namaPerusahaan;
     private String alamatPerusahaan;
-    private String pekerja;
-    private String investor;
-    
+    private String email;
+    private String nomorTelp;
+
+
     public Perusahaan() {
-        
     }
-    
-    public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String pekerja, String investor){
+
+
+    public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String email, String nomorTelp) {
         this.namaPerusahaan = namaPerusahaan;
         this.alamatPerusahaan = alamatPerusahaan;
-        this.pekerja = pekerja;
-        this.investor = investor;
+        this.email = email;
+        this.nomorTelp = nomorTelp;
     }
-    
+
+
     public String getNamaPerusahaan() {
         return this.namaPerusahaan;
     }
@@ -30,36 +32,35 @@ public class Perusahaan {
     }
 
     public void setAlamatPerusahaan(String alamatPerusahaan) {
-
-    
         this.alamatPerusahaan = alamatPerusahaan;
     }
 
-    public String getPekerja() {
-        return this.pekerja;
+    public String getEmail() {
+        return this.email;
     }
 
-    public void setPekerja(String pekerja) {
-        this.pekerja = pekerja;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getInvestor() {
-        return this.investor;
+    public String getNomorTelp() {
+        return this.nomorTelp;
     }
 
-    public void setInvestor(String investor) {
-        this.investor = investor;
+    public void setNomorTelp(String nomorTelp) {
+        this.nomorTelp = nomorTelp;
     }
-    
+
 
     @Override
     public String toString() {
         return "{" +
-            " nama_perusahaan='" + getNamaPerusahaan() + "'" +
-            ", alamat_perusahaan='" + getAlamatPerusahaan() + "'" +
-            ", pekerja='" + getPekerja() + "'" +
-            ", investor='" + getInvestor() + "'" +
+            " namaPerusahaan='" + getNamaPerusahaan() + "'" +
+            ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", nomorTelp='" + getNomorTelp() + "'" +
             "}";
     }
+    
     
 }
