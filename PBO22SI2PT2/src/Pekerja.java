@@ -8,20 +8,24 @@ public class Pekerja {
     private String jenisKelamin;
     private String alamat;
     private String nomorHP;
+    private String email;
     private String lulusan;
 
     public Pekerja (){
 
     }
 
-    public Pekerja(String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String lulusan) {
+
+    public Pekerja(String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
         this.nama = nama;
         this.usia = usia;
         this.jenisKelamin = jenisKelamin;
         this.alamat = alamat;
         this.nomorHP = nomorHP;
+        this.email = email;
         this.lulusan = lulusan;
     }
+    
 
     public String getNama() {
         return this.nama;
@@ -63,6 +67,14 @@ public class Pekerja {
         this.nomorHP = nomorHP;
     }
 
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getLulusan() {
         return this.lulusan;
     }
@@ -70,6 +82,7 @@ public class Pekerja {
     public void setLulusan(String lulusan) {
         this.lulusan = lulusan;
     }
+
 
     @Override
     public String toString() {
@@ -79,7 +92,9 @@ public class Pekerja {
             ", jenisKelamin='" + getJenisKelamin() + "'" +
             ", alamat='" + getAlamat() + "'" +
             ", nomorHP='" + getNomorHP() + "'" +
+            ", email='" + getEmail() + "'" +
             ", lulusan='" + getLulusan() + "'" +
             "}";
     }
+
 }

@@ -6,7 +6,6 @@ public class App {
     public static void main(String[] args) throws Exception {
 
 
-
         Scanner input = new Scanner(System.in);
 
         System.out.println("Menu Utama :");
@@ -44,7 +43,7 @@ public class App {
     public static void dataPekerja() {
         
         Scanner inputdata = new Scanner(System.in);
-        String nama , usia , jenisKelamin , alamat , nomorHP , lulusan , kembali;
+        String nama , usia , jenisKelamin , alamat , nomorHP , lulusan , kembali , email;
 
         System.out.print("Nama\t : ");
         nama = inputdata.nextLine();
@@ -61,10 +60,13 @@ public class App {
         System.out.print("Nomor Handphone\t :");
         nomorHP = inputdata.nextLine();
 
+        System.out.print("Email\t : ");
+        email = inputdata.nextLine();
+
         System.out.print("Lulusan\t : ");
         lulusan = inputdata.nextLine();
 
-        pekerja.add(new Pekerja(nama, usia, jenisKelamin, alamat, nomorHP, lulusan));
+        pekerja.add(new Pekerja(nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan));
 
         System.out.println("Selamat datang !!!");
 
@@ -78,7 +80,7 @@ public class App {
             //System.exit(0);
         //}
 
-        System.out.println(pekerja);
+        //System.out.println(pekerja);
 
         inputdata.close();
 
