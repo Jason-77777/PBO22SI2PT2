@@ -5,6 +5,7 @@ public class App {
     public static ArrayList<Pekerja> pekerja = new ArrayList<Pekerja>();
     public static void main(String[] args) throws Exception {
 
+        init();
 
         Scanner input = new Scanner(System.in);
 
@@ -40,6 +41,13 @@ public class App {
         } 
     }
 
+    public static void init() {
+
+        Pekerja Anton = new Pekerja("01", "Anton", "20", "L", "Jln Apel", "081234756479", "anton10@gmail.com", "S1");
+        pekerja.add(Anton);
+        
+    }
+
     public static void dataPekerja() {
         
         Scanner inputdata = new Scanner(System.in);
@@ -70,6 +78,11 @@ public class App {
         lulusan = inputdata.nextLine();
 
         pekerja.add(new Pekerja(idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan));
+
+        for (Pekerja pekerja2 : pekerja) {
+            System.out.println("ID\t Nama\t Usia\t Jenis Kelamin\t Alamat\t Nomor Handphone\t Email\t Lulusan\t");
+            System.out.println(pekerja2);
+        }
 
 
         System.out.println("Selamat datang !!!");
