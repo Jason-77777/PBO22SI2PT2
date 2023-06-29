@@ -3,6 +3,7 @@
 
 public class Pekerja {
 
+    private String idPekerja;
     private String nama;
     private String usia;
     private String jenisKelamin;
@@ -15,7 +16,8 @@ public class Pekerja {
 
     }
 
-    public Pekerja(String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
+    public Pekerja(String idPekerja, String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
+        this.idPekerja = idPekerja;
         this.nama = nama;
         this.usia = usia;
         this.jenisKelamin = jenisKelamin;
@@ -24,7 +26,14 @@ public class Pekerja {
         this.email = email;
         this.lulusan = lulusan;
     }
-    
+
+    public String getIdPekerja() {
+        return this.idPekerja;
+    }
+
+    public void setIdPekerja(String idPekerja) {
+        this.idPekerja = idPekerja;
+    }
 
     public String getNama() {
         return this.nama;
@@ -86,7 +95,8 @@ public class Pekerja {
     @Override
     public String toString() {
         return "{" +
-            " nama='" + getNama() + "'" +
+            " idPekerja='" + getIdPekerja() + "'" +
+            ", nama='" + getNama() + "'" +
             ", usia='" + getUsia() + "'" +
             ", jenisKelamin='" + getJenisKelamin() + "'" +
             ", alamat='" + getAlamat() + "'" +
@@ -95,5 +105,6 @@ public class Pekerja {
             ", lulusan='" + getLulusan() + "'" +
             "}";
     }
+
 
 }

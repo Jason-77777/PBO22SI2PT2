@@ -1,21 +1,21 @@
-//Perusahaan adalah sebuah badan usaha yang tetap dan didirikan oleh manusia yang bertujuan mencari laba atau keuntungan
-
 public class Perusahaan {
+
     private String namaPerusahaan;
     private String alamatPerusahaan;
     private String email;
-    private String nomorTelp;
-
+    private String nomorHP;
+    private String lowonganPekerjaan;
 
     public Perusahaan() {
     }
 
 
-    public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String email, String nomorTelp) {
+    public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String email, String nomorHP, String lowonganPekerjaan) {
         this.namaPerusahaan = namaPerusahaan;
         this.alamatPerusahaan = alamatPerusahaan;
         this.email = email;
-        this.nomorTelp = nomorTelp;
+        this.nomorHP = nomorHP;
+        this.lowonganPekerjaan = lowonganPekerjaan;
     }
 
 
@@ -43,12 +43,20 @@ public class Perusahaan {
         this.email = email;
     }
 
-    public String getNomorTelp() {
-        return this.nomorTelp;
+    public String getNomorHP() {
+        return this.nomorHP;
     }
 
-    public void setNomorTelp(String nomorTelp) {
-        this.nomorTelp = nomorTelp;
+    public void setNomorHP(String nomorHP) {
+        this.nomorHP = nomorHP;
+    }
+
+    public String getLowonganPekerjaan() {
+        return this.lowonganPekerjaan;
+    }
+
+    public void setLowonganPekerjaan(String lowonganPekerjaan) {
+        this.lowonganPekerjaan = lowonganPekerjaan;
     }
 
 
@@ -58,9 +66,9 @@ public class Perusahaan {
             " namaPerusahaan='" + getNamaPerusahaan() + "'" +
             ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
             ", email='" + getEmail() + "'" +
-            ", nomorTelp='" + getNomorTelp() + "'" +
+            ", nomorHP='" + getNomorHP() + "'" +
+            ", lowonganPekerjaan='" + getLowonganPekerjaan() + "'" +
             "}";
     }
-    
-    
+
 }

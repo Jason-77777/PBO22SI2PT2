@@ -1,7 +1,5 @@
-//Class ini adalah untuk menyimpan data Narasumber yang akan melakukan sesi training
-// Data narasumber ini berisikan nama, usia, profesi, cv, dan fokus materi
-
 public class Narasumber {
+
     private String nama;
     private String jenisKelamin;
     private String usia;
@@ -11,11 +9,10 @@ public class Narasumber {
     private String jabatan;
     private String perusahaan;
 
-
-    public Narasumber (){
-        
+    public Narasumber() {
     }
-    
+
+
     public Narasumber(String nama, String jenisKelamin, String usia, String email, String nomorTelepon, String lulusan, String jabatan, String perusahaan) {
         this.nama = nama;
         this.jenisKelamin = jenisKelamin;
@@ -97,14 +94,15 @@ public class Narasumber {
     public String toString() {
         return "{" +
             " nama='" + getNama() + "'" +
-            ", jenis_kelamin='" + getJenisKelamin() + "'" +
+            ", jenisKelamin='" + getJenisKelamin() + "'" +
             ", usia='" + getUsia() + "'" +
             ", email='" + getEmail() + "'" +
-            ", nomor_telepon='" + getNomorTelepon() + "'" +
+            ", nomorTelepon='" + getNomorTelepon() + "'" +
             ", lulusan='" + getLulusan() + "'" +
             ", jabatan='" + getJabatan() + "'" +
             ", perusahaan='" + getPerusahaan() + "'" +
             "}";
     }
 
+    
 }
