@@ -1,11 +1,18 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.JenisPekerjaanFullTime;
+
 public class App {
     public static ArrayList<Pekerja> pekerja = new ArrayList<Pekerja>();
+    public static ArrayList<JenisPekerjaanFullTime> pertama = new ArrayList<JenisPekerjaanFullTime>();
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
-        //init();
+        init();
 
         boolean kembali = true;
 
@@ -46,12 +53,14 @@ public class App {
     } 
 }
 
-    //public static void init() {
+    public static void init() {
 
-        //Pekerja Anton = new Pekerja("01", "Anton", "20", "L", "Jln Apel", "081234756479", "anton10@gmail.com", "S1");
-        //pekerja.add(Anton);
+        JenisPekerjaanFullTime pertama = new JenisPekerjaanFullTime("PT Maju Jaya", "Jln. Melati No.14, Medan", "061-457896", "8 jam", "Rp,3.500.000", "Full Time") {
+
+            
+        };
         
-    //}
+    }
 
     public static void dataPekerja() {
         
@@ -115,32 +124,21 @@ public class App {
         System.out.println("2. Part Time");
         System.out.print("Pilihan : ");
 
-        int pilihan = inputdata.nextInt();
+        int pilih = inputdata.nextInt();
 
-        switch(pilihan) {
+        switch (pilih) {
             case 1:
-                
+                for(JenisPekerjaanFullTime pertama2 : pertama) {
+                    System.out.println("Lowongan Pekerjaan Yang Tersedia :");
+                    System.out.println(pertama2);
+                }
                 break;
-
-            case 2:
+            default:
 
                 break;
-
         }
 
 
-
-
-    
-
-
-
     }
-
-
-
-
-
-
 }   
 

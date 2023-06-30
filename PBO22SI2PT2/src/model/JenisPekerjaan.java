@@ -7,19 +7,11 @@ public abstract class JenisPekerjaan {
     private String nomorTelp;
     private String jamKerja;
     private String gaji;
-    private String tipepekerjaan;
-    private String tipePekerjaanFulllTime;
-    private String tipePekerjaanPartTime;
+    private String tipePekerjaan;
 
-    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String nomorTelp, String jamKerja, String gaji, String tipepekerjaan, String tipePekerjaanFulllTime, String tipePekerjaanPartTime) {
-        this.namaPerusahaan = namaPerusahaan;
-        this.alamatPerusahaan = alamatPerusahaan;
-        this.nomorTelp = nomorTelp;
-        this.jamKerja = jamKerja;
-        this.gaji = gaji;
-        this.tipepekerjaan = tipepekerjaan;
-        this.tipePekerjaanFulllTime = tipePekerjaanFulllTime;
-        this.tipePekerjaanPartTime = tipePekerjaanPartTime;
+
+    public JenisPekerjaan(String namaPerusahaan2, String alamatPerusahaan2, String nomorTelp2, String jamKerja2,
+            String gaji2, String tipepekerjaan2) {
     }
 
     public String getNamaPerusahaan() {
@@ -62,41 +54,26 @@ public abstract class JenisPekerjaan {
         this.gaji = gaji;
     }
 
-    public String getTipepekerjaan() {
-        return this.tipepekerjaan;
+    public String getTipePekerjaan() {
+        return this.tipePekerjaan;
     }
 
-    public void setTipepekerjaan(String tipepekerjaan) {
-        this.tipepekerjaan = tipepekerjaan;
+    public void setTipePekerjaan(String tipePekerjaan) {
+        this.tipePekerjaan = tipePekerjaan;
     }
 
-    public String getTipePekerjaanFulllTime() {
-        return this.tipePekerjaanFulllTime;
-    }
 
-    public void setTipePekerjaanFulllTime(String tipePekerjaanFulllTime) {
-        this.tipePekerjaanFulllTime = tipePekerjaanFulllTime;
-    }
-
-    public String getTipePekerjaanPartTime() {
-        return this.tipePekerjaanPartTime;
-    }
-
-    public void setTipePekerjaanPartTime(String tipePekerjaanPartTime) {
-        this.tipePekerjaanPartTime = tipePekerjaanPartTime;
-    }
-
+    
     @Override
     public String toString() {
         return "{" +
-            " namaPerusahaan='" + getNamaPerusahaan() + "'" +
-            ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
-            ", nomorTelp='" + getNomorTelp() + "'" +
-            ", jamKerja='" + getJamKerja() + "'" +
-            ", gaji='" + getGaji() + "'" +
-            ", tipepekerjaan='" + getTipepekerjaan() + "'" +
-            ", tipePekerjaanFulllTime='" + getTipePekerjaanFulllTime() + "'" +
-            ", tipePekerjaanPartTime='" + getTipePekerjaanPartTime() + "'" +
+            "Nama perusahaan = '" + getNamaPerusahaan() + "'" +
+            ", Alamat = '" + getAlamatPerusahaan() + "'" +
+            ", No.Telp = '" + getNomorTelp() + "'" +
+            ", Jam kerja = '" + getJamKerja() + "'" +
+            ", Gaji = '" + getGaji() + "'" +
+            ", Tipe pekerjaan = '" + getTipePekerjaan() + "'" +
             "}";
     }
+    
 }
