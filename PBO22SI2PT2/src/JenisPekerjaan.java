@@ -2,38 +2,27 @@
 
 public abstract class JenisPekerjaan {
 
-    private String namaPerusahaan;
-    private String alamatPerusahaan;
+    private String tipepekerjann;
     private String tipePekerjaanFullTime;
     private String tipePekerjaanPartTime;
-
 
     public JenisPekerjaan() {
     }
 
 
-    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String tipePekerjaanFullTime, String tipePekerjaanPartTime) {
-        this.namaPerusahaan = namaPerusahaan;
-        this.alamatPerusahaan = alamatPerusahaan;
+    public JenisPekerjaan(String tipepekerjann, String tipePekerjaanFullTime, String tipePekerjaanPartTime) {
+        this.tipepekerjann = tipepekerjann;
         this.tipePekerjaanFullTime = tipePekerjaanFullTime;
         this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
 
-    public String getNamaPerusahaan() {
-        return this.namaPerusahaan;
+    public String getTipepekerjann() {
+        return this.tipepekerjann;
     }
 
-    public void setNamaPerusahaan(String namaPerusahaan) {
-        this.namaPerusahaan = namaPerusahaan;
-    }
-
-    public String getAlamatPerusahaan() {
-        return this.alamatPerusahaan;
-    }
-
-    public void setAlamatPerusahaan(String alamatPerusahaan) {
-        this.alamatPerusahaan = alamatPerusahaan;
+    public void setTipepekerjann(String tipepekerjann) {
+        this.tipepekerjann = tipepekerjann;
     }
 
     public String getTipePekerjaanFullTime() {
@@ -52,15 +41,16 @@ public abstract class JenisPekerjaan {
         this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
+
     @Override
     public String toString() {
         return "{" +
-            " namaPerusahaan='" + getNamaPerusahaan() + "'" +
-            ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
+            " tipepekerjann='" + getTipepekerjann() + "'" +
             ", tipePekerjaanFullTime='" + getTipePekerjaanFullTime() + "'" +
             ", tipePekerjaanPartTime='" + getTipePekerjaanPartTime() + "'" +
             "}";
     }
+    
 
 
     

@@ -95,14 +95,14 @@ public class Pekerja {
     @Override
     public String toString() {
         return "{" +
-            " idPekerja='" + getIdPekerja() + "'" +
-            ", nama='" + getNama() + "'" +
-            ", usia='" + getUsia() + "'" +
-            ", jenisKelamin='" + getJenisKelamin() + "'" +
-            ", alamat='" + getAlamat() + "'" +
-            ", nomorHP='" + getNomorHP() + "'" +
-            ", email='" + getEmail() + "'" +
-            ", lulusan='" + getLulusan() + "'" +
+            "ID = '" + getIdPekerja() + "'" +
+            ", Nama='" + getNama() + "'" +
+            ", Usia ='" + getUsia() + "'" +
+            ", Jenis Kelamin = '" + getJenisKelamin() + "'" +
+            ", Alamat = '" + getAlamat() + "'" +
+            ", Nomor HP = '" + getNomorHP() + "'" +
+            ", Email = '" + getEmail() + "'" +
+            ", Lulusan = '" + getLulusan() + "'" +
             "}";
     }
 
