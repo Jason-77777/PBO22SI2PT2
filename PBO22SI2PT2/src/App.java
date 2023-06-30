@@ -110,6 +110,24 @@ public class App {
 
         Scanner inputdata = new Scanner(System.in);
 
+        System.out.println("Jenis Pekerjaan :");
+        System.out.println("1. Full Time");
+        System.out.println("2. Part Time");
+        System.out.print("Pilihan : ");
+
+        int pilihan = inputdata.nextInt();
+
+        switch(pilihan) {
+            case 1:
+                
+                break;
+
+            case 2:
+
+                break;
+
+        }
+
 
 
 
