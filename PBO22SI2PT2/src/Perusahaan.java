@@ -63,11 +63,11 @@ public class Perusahaan {
     @Override
     public String toString() {
         return "{" +
-            " namaPerusahaan='" + getNamaPerusahaan() + "'" +
-            ", alamatPerusahaan='" + getAlamatPerusahaan() + "'" +
-            ", email='" + getEmail() + "'" +
-            ", nomorHP='" + getNomorHP() + "'" +
-            ", lowonganPekerjaan='" + getLowonganPekerjaan() + "'" +
+            "Nama perusahaan = '" + getNamaPerusahaan() + "'" +
+            ", Alamat = '" + getAlamatPerusahaan() + "'" +
+            ", Email='" + getEmail() + "'" +
+            ", No.Telp = '" + getNomorHP() + "'" +
+            ", Lowongan pekerjaan yang tesedia = '" + getLowonganPekerjaan() + "'" +
             "}";
     }
 

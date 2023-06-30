@@ -22,6 +22,69 @@ public abstract class JenisPekerjaan {
         this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
+    public String getNamaPerusahaan() {
+        return this.namaPerusahaan;
+    }
+
+    public void setNamaPerusahaan(String namaPerusahaan) {
+        this.namaPerusahaan = namaPerusahaan;
+    }
+
+    public String getAlamatPerusahaan() {
+        return this.alamatPerusahaan;
+    }
+
+    public void setAlamatPerusahaan(String alamatPerusahaan) {
+        this.alamatPerusahaan = alamatPerusahaan;
+    }
+
+    public String getNomorTelp() {
+        return this.nomorTelp;
+    }
+
+    public void setNomorTelp(String nomorTelp) {
+        this.nomorTelp = nomorTelp;
+    }
+
+    public String getJamKerja() {
+        return this.jamKerja;
+    }
+
+    public void setJamKerja(String jamKerja) {
+        this.jamKerja = jamKerja;
+    }
+
+    public String getGaji() {
+        return this.gaji;
+    }
+
+    public void setGaji(String gaji) {
+        this.gaji = gaji;
+    }
+
+    public String getTipepekerjaan() {
+        return this.tipepekerjaan;
+    }
+
+    public void setTipepekerjaan(String tipepekerjaan) {
+        this.tipepekerjaan = tipepekerjaan;
+    }
+
+    public String getTipePekerjaanFulllTime() {
+        return this.tipePekerjaanFulllTime;
+    }
+
+    public void setTipePekerjaanFulllTime(String tipePekerjaanFulllTime) {
+        this.tipePekerjaanFulllTime = tipePekerjaanFulllTime;
+    }
+
+    public String getTipePekerjaanPartTime() {
+        return this.tipePekerjaanPartTime;
+    }
+
+    public void setTipePekerjaanPartTime(String tipePekerjaanPartTime) {
+        this.tipePekerjaanPartTime = tipePekerjaanPartTime;
+    }
 
     @Override
     public String toString() {
@@ -36,47 +99,4 @@ public abstract class JenisPekerjaan {
             ", tipePekerjaanPartTime='" + getTipePekerjaanPartTime() + "'" +
             "}";
     }
-
-
-    private String getTipePekerjaanPartTime() {
-        return null;
-    }
-
-
-    private String getTipePekerjaanFulllTime() {
-        return null;
-    }
-
-
-    private String getTipepekerjaan() {
-        return null;
-    }
-
-
-    private String getGaji() {
-        return null;
-    }
-
-
-    private String getJamKerja() {
-        return null;
-    }
-
-
-    private String getNomorTelp() {
-        return null;
-    }
-
-
-    private String getAlamatPerusahaan() {
-        return null;
-    }
-
-
-    private String getNamaPerusahaan() {
-        return null;
-    }
-
-
-
 }

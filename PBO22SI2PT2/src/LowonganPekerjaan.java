@@ -73,12 +73,12 @@ public class LowonganPekerjaan {
     @Override
     public String toString() {
         return "{" +
-            " namaPerusahaan='" + getNamaPerusahaan() + "'" +
-            ", jobdesc='" + getJobdesc() + "'" +
-            ", jumlahPekerja='" + getJumlahPekerja() + "'" +
-            ", jenisPekerjaan='" + getJenisPekerjaan() + "'" +
-            ", lokasi='" + getLokasi() + "'" +
-            ", lulusan='" + getLulusan() + "'" +
+            "Nama perusahaan = '" + getNamaPerusahaan() + "'" +
+            ", Job description = '" + getJobdesc() + "'" +
+            ", Jumlah pekerja yang dibutuhkan = '" + getJumlahPekerja() + "'" +
+            ", Tipe pekerjaan = '" + getJenisPekerjaan() + "'" +
+            ", Lokasi = '" + getLokasi() + "'" +
+            ", Lulusan = '" + getLulusan() + "'" +
             "}";
     }
 

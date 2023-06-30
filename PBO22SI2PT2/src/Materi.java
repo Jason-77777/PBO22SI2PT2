@@ -43,9 +43,9 @@ public class Materi {
     @Override
     public String toString() {
         return "{" +
-            " topik='" + getTopik() + "'" +
-            ", jenisLatihan='" + getJenisLatihan() + "'" +
-            ", narasumber='" + getNarasumber() + "'" +
+            "Topik = '" + getTopik() + "'" +
+            ", Jenis latihan = '" + getJenisLatihan() + "'" +
+            ", Narasumber = '" + getNarasumber() + "'" +
             "}";
     }
 

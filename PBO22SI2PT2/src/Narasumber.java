@@ -93,14 +93,14 @@ public class Narasumber {
     @Override
     public String toString() {
         return "{" +
-            " nama='" + getNama() + "'" +
-            ", jenisKelamin='" + getJenisKelamin() + "'" +
-            ", usia='" + getUsia() + "'" +
-            ", email='" + getEmail() + "'" +
-            ", nomorTelepon='" + getNomorTelepon() + "'" +
-            ", lulusan='" + getLulusan() + "'" +
-            ", jabatan='" + getJabatan() + "'" +
-            ", perusahaan='" + getPerusahaan() + "'" +
+            "Nama = '" + getNama() + "'" +
+            ", Jenis Kelamin = '" + getJenisKelamin() + "'" +
+            ", Usia = '" + getUsia() + "'" +
+            ", Email = '" + getEmail() + "'" +
+            ", No.Telepon = '" + getNomorTelepon() + "'" +
+            ", Lulusan = '" + getLulusan() + "'" +
+            ", Jabatan = '" + getJabatan() + "'" +
+            ", Perusahaan = '" + getPerusahaan() + "'" +
             "}";
     }
 

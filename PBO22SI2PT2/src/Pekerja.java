@@ -100,7 +100,7 @@ public class Pekerja {
             ", Usia ='" + getUsia() + "'" +
             ", Jenis Kelamin = '" + getJenisKelamin() + "'" +
             ", Alamat = '" + getAlamat() + "'" +
-            ", Nomor HP = '" + getNomorHP() + "'" +
+            ", No.HP = '" + getNomorHP() + "'" +
             ", Email = '" + getEmail() + "'" +
             ", Lulusan = '" + getLulusan() + "'" +
             "}";
