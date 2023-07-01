@@ -1,18 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import model.JenisPekerjaanFullTime;
-
 public class App {
     public static ArrayList<Pekerja> pekerja = new ArrayList<Pekerja>();
-    public static ArrayList<JenisPekerjaanFullTime> pertama = new ArrayList<JenisPekerjaanFullTime>();
-    /**
-     * @param args
-     * @throws Exception
-     */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        init();
+        //init();
 
         boolean kembali = true;
 
@@ -53,21 +46,21 @@ public class App {
     } 
 }
 
-    public static void init() {
+    //public static void init() {
 
-        JenisPekerjaanFullTime pertama = new JenisPekerjaanFullTime("PT Maju Jaya", "Jln. Melati No.14, Medan", "061-457896", "8 jam", "Rp,3.500.000", "Full Time") {
+        //JenisPekerjaanFullTime pertama = new JenisPekerjaanFullTime("PT Maju Jaya", "Jln. Melati No.14, Medan", "061-457896", "8 jam", "Rp,3.500.000", "Full Time") {
 
             
-        };
+        //};
         
-    }
+    //}
 
     public static void dataPekerja() {
         
         Scanner inputdata = new Scanner(System.in);
         String idPekerja, nama , usia , jenisKelamin , alamat , nomorHP , lulusan , kembali , email;
 
-        System.out.print("ID\t : ");
+        System.out.print("ID\t : #");
         idPekerja = inputdata.nextLine();
 
         System.out.print("Nama\t : ");
@@ -124,19 +117,9 @@ public class App {
         System.out.println("2. Part Time");
         System.out.print("Pilihan : ");
 
-        int pilih = inputdata.nextInt();
+        
 
-        switch (pilih) {
-            case 1:
-                for(JenisPekerjaanFullTime pertama2 : pertama) {
-                    System.out.println("Lowongan Pekerjaan Yang Tersedia :");
-                    System.out.println(pertama2);
-                }
-                break;
-            default:
-
-                break;
-        }
+        
 
 
     }
