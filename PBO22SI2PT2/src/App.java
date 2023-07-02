@@ -1,8 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.JenisPekerjaanFullTime;
+
 public class App {
     public static ArrayList<Pekerja> pekerja = new ArrayList<Pekerja>();
+    public static ArrayList<JenisPekerjaanFullTime> pertama = new ArrayList<JenisPekerjaanFullTime>();
     public static void main(String[] args) {
 
         //init();
@@ -117,6 +120,23 @@ public class App {
         System.out.println("2. Part Time");
         System.out.print("Pilihan : ");
 
+        int pilih = inputdata.nextInt();
+
+        switch (pilih) {
+            case 1:
+                System.out.println("Lowongan pekerjaan yang tersedia :");
+                System.out.println("Nama perusahaan\t : PT Maju Jaya");
+                System.out.println("Alamat\t : Jln Apel No.21, Medan");
+                System.out.println("No.Telp\t : 061-457865");
+                System.out.println("Jam kerja\t : 8 jam");
+                System.out.println("Gaji\t : Rp.3,500,000");
+                System.out.println("Tipe pekerjaan\t : Full Time");
+                
+                break;
+        
+            default:
+                break;
+        }
         
 
         
