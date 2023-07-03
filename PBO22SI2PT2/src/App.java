@@ -105,6 +105,8 @@ public class App {
         
     }
 
+    
+
     public static void dataPekerja() {
         
         input = new Scanner(System.in);
@@ -149,7 +151,23 @@ public class App {
             System.out.println("Terima Kasih !!!");
             return;
         }
+
         input.close();
+
+        //System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
+        //kembali = inputdata.nextLine();
+
+        //if (kembali.equalsIgnoreCase("Y")) {
+            //return;
+        //} else {
+            //System.out.println("Terima Kasih !!!");
+            //System.exit(0);
+        //}
+
+        System.out.println(pekerja);
+
+        inputdata.close();
+
         
     }
 
