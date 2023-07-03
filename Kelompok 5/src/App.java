@@ -72,17 +72,17 @@ public class App {
                 System.out.println("Terima kasih !!!");
                 break;
         }
-       // input.close();
+        //input.close();
     } 
 }
 
     public static void init() {
 
-        Pekerja andi = new Pekerja("03", "Andi", 22, "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1");
+        Pekerja andi = new Pekerja("03", "Andi", "22", "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1");
         pekerja.add(andi);
-        Pekerja tono = new Pekerja("05", "Tono", 24, "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1");
+        Pekerja tono = new Pekerja("05", "Tono", "24", "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1");
         pekerja.add(tono);
-        Pekerja hanni = new Pekerja("07", "Hanni", 18, "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA");
+        Pekerja hanni = new Pekerja("07", "Hanni", "18", "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA");
         pekerja.add(hanni);
 
         FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
@@ -110,8 +110,7 @@ public class App {
     public static void dataPekerja() {
         
         input = new Scanner(System.in);
-        String idPekerja, nama, jenisKelamin, alamat, nomorHP, lulusan, email;
-        int usia;
+        String idPekerja="", nama="", usia="", jenisKelamin="", alamat="", nomorHP="", lulusan="", email="";
 
         System.out.print("ID\t : #");
         idPekerja = input.nextLine();
@@ -120,11 +119,11 @@ public class App {
         nama = input.nextLine();
 
         System.out.print("Usia\t : ");
-        usia = input.nextInt();
+        usia = input.nextLine();
 
         System.out.print("Jenis Kelamin (L/P) : ");
         jenisKelamin = input.nextLine();
-        
+
         System.out.print("Alamat\t : ");
         alamat = input.nextLine();
 
@@ -146,28 +145,13 @@ public class App {
         if (kembali.equalsIgnoreCase("yes")) {
                 return;
         } 
-        else if (kembali.equalsIgnoreCase("no")) {
-            System.out.println("Terima Kasih !!!");
-            return;
-        }
-
-      //  input.close();
-
-        System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
-        kembali = input.nextLine();
-
-        if (kembali.equalsIgnoreCase("Y")) {
-            return;
-        } else {
+        else  {
             System.out.println("Terima Kasih !!!");
             System.exit(0);
         }
 
-        System.out.println(pekerja);
+      //  input.close();
 
-        input.close();
-
-        
     }
 
     public static void dataJenisLowonganPekerjaan(){

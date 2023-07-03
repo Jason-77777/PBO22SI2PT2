@@ -5,7 +5,7 @@ public class Pekerja {
 
     private String idPekerja;
     private String nama;
-    private int usia;
+    private String usia;
     private String jenisKelamin;
     private String alamat;
     private String nomorHP;
@@ -17,7 +17,7 @@ public class Pekerja {
     }
    
 
-    public Pekerja(String idPekerja, String nama, int usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
+    public Pekerja(String idPekerja, String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
         this.idPekerja = idPekerja;
         this.nama = nama;
         this.usia = usia;
@@ -45,11 +45,11 @@ public class Pekerja {
         this.nama = nama;
     }
 
-    public int getUsia() {
+    public String getUsia() {
         return this.usia;
     }
 
-    public void setUsia(int usia) {
+    public void setUsia(String usia) {
         this.usia = usia;
     }
 
@@ -93,6 +93,7 @@ public class Pekerja {
         this.lulusan = lulusan;
     }
 
+   
     
     @Override
     public String toString() {
