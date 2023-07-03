@@ -10,9 +10,16 @@ public abstract class JenisPekerjaan {
     private String tipePekerjaan;
 
 
-    public JenisPekerjaan(String namaPerusahaan2, String alamatPerusahaan2, String nomorTelp2, String jamKerja2,
-            String gaji2, String tipepekerjaan2) {
+    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String nomorTelp, String jamKerja, String gaji, String tipePekerjaan) {
+        this.namaPerusahaan = namaPerusahaan;
+        this.alamatPerusahaan = alamatPerusahaan;
+        this.nomorTelp = nomorTelp;
+        this.jamKerja = jamKerja;
+        this.gaji = gaji;
+        this.tipePekerjaan = tipePekerjaan;
     }
+
+
 
     public String getNamaPerusahaan() {
         return this.namaPerusahaan;
@@ -72,7 +79,7 @@ public abstract class JenisPekerjaan {
             ", No.Telp = '" + getNomorTelp() + "'" +
             ", Jam kerja = '" + getJamKerja() + "'" +
             ", Gaji = '" + getGaji() + "'" +
-            ", Tipe pekerjaan = '" + getTipePekerjaan() + "'" +
+            ", Tipe = '" + getTipePekerjaan() + "'" +
             "}";
     }
     

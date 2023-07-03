@@ -1,14 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import model.JenisPekerjaanFullTime;
+import model.FullTime;
+import model.PartTime;
 
 public class App {
     public static ArrayList<Pekerja> pekerja = new ArrayList<Pekerja>();
-    public static ArrayList<JenisPekerjaanFullTime> pertama = new ArrayList<JenisPekerjaanFullTime>();
+    public static ArrayList<FullTime> full = new ArrayList<FullTime>();
+    public static ArrayList<PartTime> part = new ArrayList<PartTime>();
     public static void main(String[] args) {
 
-        //init();
+        init();
 
         boolean kembali = true;
 
@@ -49,19 +51,39 @@ public class App {
     } 
 }
 
-    //public static void init() {
+    public static void init() {
 
-        //JenisPekerjaanFullTime pertama = new JenisPekerjaanFullTime("PT Maju Jaya", "Jln. Melati No.14, Medan", "061-457896", "8 jam", "Rp,3.500.000", "Full Time") {
+        Pekerja andi = new Pekerja("03", "Andi", "22", "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1");
+        pekerja.add(andi);
+        Pekerja tono = new Pekerja("05", "Tono", "24", "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1");
+        pekerja.add(tono);
+        Pekerja hanni = new Pekerja("07", "Hanni", "18", "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA");
+        pekerja.add(hanni);
 
-            
-        //};
+        FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
+        full.add(fullsatu);
+        FullTime fulldua = new FullTime("CV. Angin Topan", "Jln. Berastagi No.56, Medan", "061-786451", "7 jam", "Rp.3,000,000", "Full Time");
+        full.add(fulldua);
+        FullTime fulltiga = new FullTime("PT Emas Top", "Jln. Mabar No.296, Medan", "061-457183", "9 jam", "Rp.4,500,000", "Full Time");
+        full.add(fulltiga);
+
+        PartTime partsatu = new PartTime("UD. Desa Maju", "Jln. Sutomo No.19, Medan", "081354794568", "4 jam", "Rp.1,500,000", "Part Time");
+        part.add(partsatu);
+        PartTime partdua = new PartTime("CV. Sumatra Jaya", "Jln. Krakatau No.29, Medan", "061-156347", "3 jam", "Rp.1,300,000", "Part Time");
+        part.add(partdua);
+        PartTime parttiga = new PartTime("UD. Bersama Makmur", "Jln. Jeruk No.12, Medan", "081364857164", "3 jam", "Rp.1,000,000", "Part Time");
+        part.add(parttiga);
+
+
+
         
-    //}
+        
+    }
 
     public static void dataPekerja() {
         
         Scanner inputdata = new Scanner(System.in);
-        String idPekerja, nama , usia , jenisKelamin , alamat , nomorHP , lulusan , kembali , email;
+        String idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, lulusan, email;
 
         System.out.print("ID\t : #");
         idPekerja = inputdata.nextLine();
@@ -88,27 +110,25 @@ public class App {
         lulusan = inputdata.nextLine();
 
         pekerja.add(new Pekerja(idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan));
+        System.out.println("Profile Pekerja");
 
         for (Pekerja pekerja2 : pekerja) {
-            System.out.println("Profile Pekerja");
             System.out.println(pekerja2);
         }
 
-
         System.out.println("Selamat datang !!!");
 
-        System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
-        kembali = inputdata.nextLine();
-
-        if (kembali.equalsIgnoreCase("Y")) {
-            return;
-        } else {
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String kembali = inputdata.nextLine();
+        if (kembali.equalsIgnoreCase("yes")) {
+                return;
+        } 
+        else if (kembali.equalsIgnoreCase("no")) {
             System.out.println("Terima Kasih !!!");
-            System.exit(0);
+            return;
         }
-
         inputdata.close();
-
+        
     }
 
     public static void dataJenisPekerjaan(){
@@ -122,26 +142,32 @@ public class App {
 
         int pilih = inputdata.nextInt();
 
+        System.out.println("Lowongan pekerjaan yang tersedia :");
+
         switch (pilih) {
             case 1:
-                System.out.println("Lowongan pekerjaan yang tersedia :");
-                System.out.println("Nama perusahaan\t : PT Maju Jaya");
-                System.out.println("Alamat\t : Jln Apel No.21, Medan");
-                System.out.println("No.Telp\t : 061-457865");
-                System.out.println("Jam kerja\t : 8 jam");
-                System.out.println("Gaji\t : Rp.3,500,000");
-                System.out.println("Tipe pekerjaan\t : Full Time");
-                
+                for (FullTime full2 : full) {
+                    System.out.println(full2);
+                }
                 break;
         
-            default:
+            case 2:
+                for (PartTime part2 : part) {
+                    System.out.println(part2);
+                }
                 break;
         }
-        
 
-        
-
-
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String kembali = inputdata.nextLine();
+        if (kembali.equalsIgnoreCase("yes")) {
+                return;
+        } 
+        else if (kembali.equalsIgnoreCase("no")) {
+            System.out.println("Terima Kasih !!!");
+            return;
+        }
+        inputdata.close();
     }
 }   
 
