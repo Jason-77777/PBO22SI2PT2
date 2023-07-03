@@ -72,7 +72,7 @@ public class App {
                 System.out.println("Terima kasih !!!");
                 break;
         }
-        input.close();
+       // input.close();
     } 
 }
 
@@ -151,7 +151,7 @@ public class App {
             return;
         }
 
-        input.close();
+      //  input.close();
 
         System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
         kembali = input.nextLine();
