@@ -8,6 +8,8 @@ public class App {
     public static ArrayList<Pekerja> pekerja = new ArrayList<Pekerja>();
     public static ArrayList<FullTime> full = new ArrayList<FullTime>();
     public static ArrayList<PartTime> part = new ArrayList<PartTime>();
+    
+    static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
 
         init();
@@ -15,9 +17,7 @@ public class App {
         boolean kembali = true;
 
     while (kembali) {
-
-        Scanner input = new Scanner(System.in);
-
+        input = new Scanner(System.in);
         System.out.println("Menu Utama :");
         System.out.println("1. Profile Pekerja");
         System.out.println("2. Jenis dan Lowongan Pekerjaan");
@@ -34,6 +34,7 @@ public class App {
         int pilihan = input.nextInt();
 
         System.out.println("-----------------------");
+
 
         switch (pilihan) {
             case 1:
@@ -77,11 +78,11 @@ public class App {
 
     public static void init() {
 
-        Pekerja andi = new Pekerja("03", "Andi", "22", "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1");
+        Pekerja andi = new Pekerja("03", "Andi", 22, "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1");
         pekerja.add(andi);
-        Pekerja tono = new Pekerja("05", "Tono", "24", "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1");
+        Pekerja tono = new Pekerja("05", "Tono", 24, "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1");
         pekerja.add(tono);
-        Pekerja hanni = new Pekerja("07", "Hanni", "18", "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA");
+        Pekerja hanni = new Pekerja("07", "Hanni", 18, "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA");
         pekerja.add(hanni);
 
         FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
@@ -106,44 +107,41 @@ public class App {
 
     public static void dataPekerja() {
         
-        Scanner inputdata = new Scanner(System.in);
-        String idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, lulusan, email;
+        input = new Scanner(System.in);
+        String idPekerja, nama, jenisKelamin, alamat, nomorHP, lulusan, email;
+        int usia;
 
         System.out.print("ID\t : #");
-        idPekerja = inputdata.nextLine();
+        idPekerja = input.nextLine();
 
         System.out.print("Nama\t : ");
-        nama = inputdata.nextLine();
+        nama = input.nextLine();
 
         System.out.print("Usia\t : ");
-        usia = inputdata.nextLine();
+        usia = input.nextInt();
 
-        System.out.print("Jenis Kelamin (L/P)\t : ");
-        jenisKelamin = inputdata.nextLine();
+        System.out.print("Jenis Kelamin (L/P) : ");
+        jenisKelamin = input.nextLine();
+        System.out.println();
 
         System.out.print("Alamat\t : ");
-        alamat = inputdata.nextLine();
+        alamat = input.nextLine();
 
         System.out.print("Nomor Handphone\t :");
-        nomorHP = inputdata.nextLine();
+        nomorHP = input.nextLine();
 
         System.out.print("Email\t : ");
-        email = inputdata.nextLine();
+        email = input.nextLine();
 
         System.out.print("Lulusan\t : ");
-        lulusan = inputdata.nextLine();
+        lulusan = input.nextLine();
 
         pekerja.add(new Pekerja(idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan));
-        System.out.println("Profile Pekerja");
-
-        for (Pekerja pekerja2 : pekerja) {
-            System.out.println(pekerja2);
-        }
-
+        
         System.out.println("Selamat datang !!!");
 
         System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String kembali = inputdata.nextLine();
+        String kembali = input.nextLine();
         if (kembali.equalsIgnoreCase("yes")) {
                 return;
         } 
@@ -151,20 +149,20 @@ public class App {
             System.out.println("Terima Kasih !!!");
             return;
         }
-        inputdata.close();
+        input.close();
         
     }
 
     public static void dataJenisLowonganPekerjaan(){
 
-        Scanner inputdata = new Scanner(System.in);
+        input = new Scanner(System.in);
 
         System.out.println("Jenis Pekerjaan :");
         System.out.println("1. Full Time");
         System.out.println("2. Part Time");
         System.out.print("Pilihan : ");
 
-        int pilih = inputdata.nextInt();
+        int pilih = input.nextInt();
 
         System.out.println("Lowongan pekerjaan yang tersedia :");
 
@@ -183,7 +181,7 @@ public class App {
         }
 
         System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String kembali = inputdata.nextLine();
+        String kembali = input.nextLine();
         if (kembali.equalsIgnoreCase("yes")) {
             return;
         } 
@@ -191,7 +189,7 @@ public class App {
             System.out.println("Terima Kasih !!!");
             return;
         }
-        inputdata.close();
+        input.close();
     }
 
     public static void dataMateri() {
