@@ -17,18 +17,21 @@ public class App {
         boolean kembali = true;
 
     while (kembali) {
-        input = new Scanner(System.in);
+        
         System.out.println("Menu Utama :");
         System.out.println("1. Profile Pekerja");
-        System.out.println("2. Jenis dan Lowongan Pekerjaan");
-        System.out.println("3. Training / Seminar");
-        System.out.println("4. Tampilkan Profile Pekerja");
-        System.out.println("5. Tampilkan Jenis dan Lowongan Pekerjaan");
-        System.out.println("6. Tampilkan Data Training / Seminar");
-        System.out.println("7. Hapus Data Pekerja");
-        System.out.println("8. Hapus Data Jenis dan Lowongan Pekerjaan");
-        System.out.println("9. Hapus Data Training / Seminar");
-        System.out.println("10. Keluar");
+        System.out.println("2. Perusahaan");
+        System.out.println("3. Jenis dan Lowongan Pekerjaan");
+        System.out.println("4. Training / Seminar");
+        System.out.println("5. Tampilkan Profile Pekerja");
+        System.out.println("6. Tampilkan Data Perusahaan");
+        System.out.println("7. Tampilkan Jenis dan Lowongan Pekerjaan Full Time dan Part Time");
+        System.out.println("8. Tampilkan Data Training / Seminar");
+        System.out.println("9. Hapus Data Pekerja");
+        System.out.println("10. Hapus Data Jenis dan Lowongan Pekerjaan Full Time");
+        System.out.println("11. Hapus Data Jenis dan Lowongan Pekerjaan Part Time");
+        System.out.println("12. Hapus Data Training / Seminar");
+        System.out.println("13. Keluar");
         System.out.print("Pilihan : ");
 
         int pilihan = input.nextInt();
@@ -40,39 +43,48 @@ public class App {
             case 1:
                 dataPekerja();
                 break;
-            case 2:
+            case 2 :
+                dataPerusahaan();
+                break;
+
+            case 3:
                 dataJenisLowonganPekerjaan();
                 break;
-            case 3:
+            case 4:
                 dataMateri();
                 dataNarasumber();
                 break;
-            case 4:
+            case 5:
                 tampilPekerja();
                 break;
-            case 5:
+            case 6 :
+                tampilPerusahaan();
+                break;
+            case 7:
                 tampilJenisLowongan();
                 break;
-            case 6 :
+            case 8 :
                 tampilMateri();
                 tampilNarasumber();
                 break;
-            case 7 :
+            case 9 :
                 hapusPekerja(0);
                 break;
-            case 8 :
-                hapusJenisLowongan();
+            case 10 :
+                hapusJenisLowonganFullTime(0);
                 break;
-            case 9 :
+            case 11 :
+                hapusJenisLowonganPartTime(0);
+                break;
+            case 12:
                 hapusMateri();
                 hapusNarasumber();
                 break;
-            case 10:
+            case 13 :
                 kembali = false;
                 System.out.println("Terima kasih !!!");
                 break;
         }
-        //input.close();
     } 
 }
 
@@ -109,7 +121,6 @@ public class App {
 
     public static void dataPekerja() {
         
-        input = new Scanner(System.in);
         String idPekerja="", nama="", usia="", jenisKelamin="", alamat="", nomorHP="", lulusan="", email="";
 
         System.out.print("ID\t : #");
@@ -127,7 +138,7 @@ public class App {
         System.out.print("Alamat\t : ");
         alamat = input.nextLine();
 
-        System.out.print("Nomor Handphone\t :");
+        System.out.print("Nomor Handphone\t : ");
         nomorHP = input.nextLine();
 
         System.out.print("Email\t : ");
@@ -143,20 +154,14 @@ public class App {
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String kembali = input.nextLine();
         if (kembali.equalsIgnoreCase("yes")) {
-                return;
-        } 
-        else  {
+            return;
+        } else  {
             System.out.println("Terima Kasih !!!");
             System.exit(0);
         }
-
-      //  input.close();
-
     }
 
     public static void dataJenisLowonganPekerjaan(){
-
-        input = new Scanner(System.in);
 
         System.out.println("Jenis Pekerjaan :");
         System.out.println("1. Full Time");
@@ -185,15 +190,18 @@ public class App {
         String kembali = input.nextLine();
         if (kembali.equalsIgnoreCase("yes")) {
             return;
-        } 
-        else if (kembali.equalsIgnoreCase("no")) {
+        } else  {
             System.out.println("Terima Kasih !!!");
-            return;
+            System.exit(0);
         }
-        input.close();
+        
     }
 
     public static void dataMateri() {
+
+    }
+
+    public static void dataPerusahaan() {
 
     }
 
@@ -207,10 +215,25 @@ public class App {
         for (Pekerja pekerja2 : pekerja) {
             System.out.println(pekerja2);
         }
+    }
 
+    public static void tampilPerusahaan() {
+        
     }
 
     public static void tampilJenisLowongan() {
+
+        System.out.println("Lowongan pekerjaan Full Time :");
+        for (FullTime full2 : full) {
+            System.out.println(full2);
+        }
+
+        System.out.println("-----------------------");
+
+        System.out.println("Lowongan pekerjaan Part Time :");
+        for (PartTime part2 : part) {
+            System.out.println(part2);
+        }
 
     }
 
@@ -226,8 +249,12 @@ public class App {
         pekerja.remove(andi);
     }
 
-    public static void hapusJenisLowongan() {
+    public static void hapusJenisLowonganFullTime(int fullsatu) {
+        full.remove(fullsatu);
+    }
 
+    public static void hapusJenisLowonganPartTime(int partsatu) {
+        part.remove(partsatu);
     }
 
     public static void hapusMateri() {
