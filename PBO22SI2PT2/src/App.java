@@ -20,10 +20,15 @@ public class App {
 
         System.out.println("Menu Utama :");
         System.out.println("1. Profile Pekerja");
-        System.out.println("2. Jenis Pekerjaan");
+        System.out.println("2. Jenis dan Lowongan Pekerjaan");
         System.out.println("3. Training / Seminar");
-        System.out.println("4. Lowongan Pekerjaan");
-        System.out.println("5. Pesan dan Notifikasi");
+        System.out.println("4. Tampilkan Profile Pekerja");
+        System.out.println("5. Tampilkan Jenis dan Lowongan Pekerjaan");
+        System.out.println("6. Tampilkan Data Training / Seminar");
+        System.out.println("7. Hapus Data Pekerja");
+        System.out.println("8. Hapus Data Jenis dan Lowongan Pekerjaan");
+        System.out.println("9. Hapus Data Training / Seminar");
+        System.out.println("10. Keluar");
         System.out.print("Pilihan : ");
 
         int pilihan = input.nextInt();
@@ -35,16 +40,35 @@ public class App {
                 dataPekerja();
                 break;
             case 2:
-                dataJenisPekerjaan();
+                dataJenisLowonganPekerjaan();
                 break;
             case 3:
-                
+                dataMateri();
+                dataNarasumber();
                 break;
             case 4:
-                
+                tampilPekerja();
                 break;
             case 5:
-                
+                tampilJenisLowongan();
+                break;
+            case 6 :
+                tampilMateri();
+                tampilNarasumber();
+                break;
+            case 7 :
+                hapusPekerja(0);
+                break;
+            case 8 :
+                hapusJenisLowongan();
+                break;
+            case 9 :
+                hapusMateri();
+                hapusNarasumber();
+                break;
+            case 10:
+                kembali = false;
+                System.out.println("Terima kasih !!!");
                 break;
         }
         input.close();
@@ -131,7 +155,7 @@ public class App {
         
     }
 
-    public static void dataJenisPekerjaan(){
+    public static void dataJenisLowonganPekerjaan(){
 
         Scanner inputdata = new Scanner(System.in);
 
@@ -161,13 +185,58 @@ public class App {
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String kembali = inputdata.nextLine();
         if (kembali.equalsIgnoreCase("yes")) {
-                return;
+            return;
         } 
         else if (kembali.equalsIgnoreCase("no")) {
             System.out.println("Terima Kasih !!!");
             return;
         }
         inputdata.close();
+    }
+
+    public static void dataMateri() {
+
+    }
+
+    public static void dataNarasumber() {
+
+    }
+
+    public static void tampilPekerja() {
+
+        System.out.println("Profile Pekerja :");
+        for (Pekerja pekerja2 : pekerja) {
+            System.out.println(pekerja2);
+        }
+
+    }
+
+    public static void tampilJenisLowongan() {
+
+    }
+
+    public static void tampilMateri() {
+
+    }
+
+    public static void tampilNarasumber() {
+
+    }
+
+    public static void hapusPekerja(int andi) {
+        pekerja.remove(andi);
+    }
+
+    public static void hapusJenisLowongan() {
+
+    }
+
+    public static void hapusMateri() {
+
+    }
+
+    public static void hapusNarasumber() {
+
     }
 }   
 
