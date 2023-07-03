@@ -104,6 +104,8 @@ public class App {
         
     }
 
+    
+
     public static void dataPekerja() {
         
         Scanner inputdata = new Scanner(System.in);
@@ -142,6 +144,7 @@ public class App {
 
         System.out.println("Selamat datang !!!");
 
+<<<<<<< Updated upstream
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String kembali = inputdata.nextLine();
         if (kembali.equalsIgnoreCase("yes")) {
@@ -151,6 +154,20 @@ public class App {
             System.out.println("Terima Kasih !!!");
             return;
         }
+=======
+        //System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
+        //kembali = inputdata.nextLine();
+
+        //if (kembali.equalsIgnoreCase("Y")) {
+            //return;
+        //} else {
+            //System.out.println("Terima Kasih !!!");
+            //System.exit(0);
+        //}
+
+        System.out.println(pekerja);
+
+>>>>>>> Stashed changes
         inputdata.close();
         
     }
