@@ -124,8 +124,7 @@ public class App {
 
         System.out.print("Jenis Kelamin (L/P) : ");
         jenisKelamin = input.nextLine();
-        System.out.println();
-
+        
         System.out.print("Alamat\t : ");
         alamat = input.nextLine();
 
@@ -154,19 +153,19 @@ public class App {
 
         input.close();
 
-        //System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
-        //kembali = inputdata.nextLine();
+        System.out.print("Kembali Ke Menu Utama? (Y/N)\t : ");
+        kembali = input.nextLine();
 
-        //if (kembali.equalsIgnoreCase("Y")) {
-            //return;
-        //} else {
-            //System.out.println("Terima Kasih !!!");
-            //System.exit(0);
-        //}
+        if (kembali.equalsIgnoreCase("Y")) {
+            return;
+        } else {
+            System.out.println("Terima Kasih !!!");
+            System.exit(0);
+        }
 
         System.out.println(pekerja);
 
-        inputdata.close();
+        input.close();
 
         
     }
