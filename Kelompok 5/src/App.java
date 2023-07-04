@@ -28,10 +28,11 @@ public class App {
         System.out.println("7. Tampilkan Jenis dan Lowongan Pekerjaan Full Time dan Part Time");
         System.out.println("8. Tampilkan Data Training / Seminar");
         System.out.println("9. Hapus Data Pekerja");
-        System.out.println("10. Hapus Data Jenis dan Lowongan Pekerjaan Full Time");
-        System.out.println("11. Hapus Data Jenis dan Lowongan Pekerjaan Part Time");
-        System.out.println("12. Hapus Data Training / Seminar");
-        System.out.println("13. Keluar");
+        System.out.println("10. Hapus Data Perusahaan");
+        System.out.println("11. Hapus Data Jenis dan Lowongan Pekerjaan Full Time");
+        System.out.println("12. Hapus Data Jenis dan Lowongan Pekerjaan Part Time");
+        System.out.println("13. Hapus Data Training / Seminar");
+        System.out.println("14. Keluar");
         System.out.print("Pilihan : ");
 
         int pilihan = input.nextInt();
@@ -46,7 +47,6 @@ public class App {
             case 2 :
                 dataPerusahaan();
                 break;
-
             case 3:
                 dataJenisLowonganPekerjaan();
                 break;
