@@ -272,14 +272,6 @@ public class App {
             System.out.println(pekerja2);
         }
 
-        System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String goBack = input.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else  {
-            System.out.println("Terima Kasih !!!");
-            System.exit(0);
-        }
     }
 
     public static void tampilPerusahaan() {
@@ -287,15 +279,6 @@ public class App {
         System.out.println("Data Perusahaan :");
         for (Perusahaan perusahaan2 : perusahaan) {
             System.out.println(perusahaan2);
-        }
-
-        System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String goBack = input.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else  {
-            System.out.println("Terima Kasih !!!");
-            System.exit(0);
         }
     }
 
@@ -312,15 +295,6 @@ public class App {
         for (PartTime part2 : part) {
             System.out.println(part2);
         }
-
-        System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String goBack = input.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else  {
-            System.out.println("Terima Kasih !!!");
-            System.exit(0);
-        }
     }
 
     public static void tampilMateriNarasumber() {
@@ -328,15 +302,6 @@ public class App {
         System.out.println("Narasumber :");
         for (Narasumber narasumber2 : narasumber) {
             System.out.println(narasumber2);
-        }
-
-        System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String goBack = input.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else  {
-            System.out.println("Terima Kasih !!!");
-            System.exit(0);
         }
     }
 
