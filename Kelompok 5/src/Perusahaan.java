@@ -1,5 +1,6 @@
 public class Perusahaan {
 
+    private String idPerusahaan;
     private String namaPerusahaan;
     private String alamatPerusahaan;
     private String email;

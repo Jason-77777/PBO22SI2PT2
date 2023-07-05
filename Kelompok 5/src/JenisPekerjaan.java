@@ -2,6 +2,7 @@
 
 public abstract class JenisPekerjaan {
 
+    private String idJenisPekerjaan;
     private String tipepekerjann;
     private String tipePekerjaanFullTime;
     private String tipePekerjaanPartTime;
