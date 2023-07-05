@@ -1,8 +1,9 @@
 public class Materi {
 
+    private String idPekerja;
     private String topik;
     private String jenisLatihan;
-    private String narasumber;
+    private Narasumber narasumber;
     private String pekerja;
 
     public Materi() {

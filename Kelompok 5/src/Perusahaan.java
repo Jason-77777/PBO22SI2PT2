@@ -4,7 +4,7 @@ public class Perusahaan {
     private String alamatPerusahaan;
     private String email;
     private String nomorHP;
-    private String lowonganPekerjaan;
+    private LowonganPekerjaan lowonganPekerjaan;
 
     public Perusahaan() {
     }

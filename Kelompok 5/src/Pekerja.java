@@ -4,6 +4,7 @@
 public class Pekerja {
 
     private String idPekerja;
+    private String idJenisPekerjaan;
     private String nama;
     private String usia;
     private String jenisKelamin;
