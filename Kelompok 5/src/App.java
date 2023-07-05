@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 import model.FullTime;
@@ -10,6 +11,7 @@ public class App {
     public static ArrayList<PartTime> part = new ArrayList<PartTime>();
     public static ArrayList<Perusahaan> perusahaan = new ArrayList<Perusahaan>();
     public static ArrayList<Narasumber> narasumber = new ArrayList<Narasumber>();
+    public static ArrayList<LowonganPekerjaan> lowongan = new ArrayList<LowonganPekerjaan>();
     
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
@@ -85,24 +87,27 @@ public class App {
                 kembali = false;
                 System.out.println("Terima kasih !!!");
                 break;
+            default :
+                kembali = true;
+                System.out.println("Pilihan anda salah. Silakan coba kembali !!!");
         }
     } 
 }
 
     public static void init() {
 
-        Pekerja andi = new Pekerja("03", "Andi", "22", "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1");
+        Pekerja andi = new Pekerja("031", "1", "Andi", "22", "L", "Jln. Sirsak No.10", "081345789153", "andiwin24@gmail.com", "S1", "Full Time");
         pekerja.add(andi);
-        Pekerja tono = new Pekerja("05", "Tono", "24", "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1");
+        Pekerja tono = new Pekerja("056", "1", "Tono", "24", "L", "Jln Durian No.41", "081234671579", "tonokeren29@gmail.com", "S1", "Full Time");
         pekerja.add(tono);
-        Pekerja hanni = new Pekerja("07", "Hanni", "18", "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA");
+        Pekerja hanni = new Pekerja("018", "2", "Hanni", "18", "P", "Jln. Seoul No.18", "081264531257", "hanni17@gmail.com", "SMA", "Part Time");
         pekerja.add(hanni);
 
-        Perusahaan maju = new Perusahaan("PT Maju Jaya", "Jln. Industri No.109, Medan", "majujaya90@gmail.com", "061-123478", "Accountant");
+        Perusahaan maju = new Perusahaan("101", "PT. Maju Jaya", "Jln. Industri No.109, Medan", "majujaya90@gmail.com", "061-123478", null);
         perusahaan.add(maju);
-        Perusahaan desa = new Perusahaan("UD. Desa Maju", "Jln. Sutomo No.19, Medan", "desamaju51@gmail.com", "081354794568", "Karyawan");
+        Perusahaan desa = new Perusahaan("157", "UD. Desa Maju", "Jln. Sutomo No.19, Medan", "desamaju51@gmail.com", "081354794568", null);
         perusahaan.add(desa);
-        Perusahaan emas = new Perusahaan("PT Emas Top", "Jln. Mabar No.296, Medan", "emastoptop88@gmail.com", "061-457183", "Accountant");
+        Perusahaan emas = new Perusahaan("146", "PT. Emas Top", "Jln. Mabar No.296, Medan", "emastoptop88@gmail.com", "061-457183", null);
         perusahaan.add(emas);
 
         FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
@@ -125,38 +130,45 @@ public class App {
         narasumber.add(naradua);
         Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
         narasumber.add(naratiga);
+
     }
 
     public static void dataPekerja() {
 
         input.nextLine();
-        String idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, lulusan, email;
+        String idPekerja, idJenisPekerjaan, nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan, jenisPekerjaan;
 
-        System.out.print("ID : #"); 
+        System.out.print("ID Pekerja\t : #"); 
         idPekerja = input.nextLine();
 
-        System.out.print("Nama\t : ");
+        System.out.print("ID Jenis Pekerjaan : #");
+        idJenisPekerjaan = input.nextLine();
+
+        System.out.print("Nama\t\t : ");
         nama = input.nextLine();
 
-        System.out.print("Usia\t : ");
+        System.out.print("Usia\t\t : ");
         usia = input.nextLine();
 
         System.out.print("Jenis Kelamin (L/P) : ");
         jenisKelamin = input.nextLine();
 
-        System.out.print("Alamat\t : ");
+        System.out.print("Alamat\t\t : ");
         alamat = input.nextLine();
 
         System.out.print("Nomor Handphone\t : ");
         nomorHP = input.nextLine();
 
-        System.out.print("Email\t : ");
+        System.out.print("Email\t\t : ");
         email = input.nextLine();
 
-        System.out.print("Lulusan\t : ");
+        System.out.print("Lulusan\t\t : ");
         lulusan = input.nextLine();
 
-        pekerja.add(new Pekerja(idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan));
+        System.out.print("Jenis pekerjaan  : ");
+        jenisPekerjaan = input.nextLine();
+
+        pekerja.add(new Pekerja(idPekerja, idJenisPekerjaan, nama, usia, jenisKelamin, alamat, nomorHP, email, lulusan, jenisPekerjaan));
         
         System.out.println("Selamat datang !!!");
         
@@ -172,8 +184,11 @@ public class App {
 
     public static void dataPerusahaan() {
 
-        String namaPerusahaan, alamatPerusahaan, email, nomorHP, lowonganPekerjaan;
         input.nextLine();
+        String idPerusahaan, namaPerusahaan, alamatPerusahaan, email, nomorHP, lowonganPekerjaan;
+        
+        System.out.print("ID Perusahaan : #");
+        idPerusahaan = input.nextLine();
 
         System.out.print("Nama perusahaan\t : ");
         namaPerusahaan = input.nextLine();
@@ -188,12 +203,11 @@ public class App {
         nomorHP = input.nextLine();
 
         System.out.print("Lowongan\t : ");
-        lowonganPekerjaan = input.nextLine();
+        lowonganPekerjaan = input.nextLine();;
 
-        perusahaan.add(new Perusahaan(namaPerusahaan, alamatPerusahaan, email, nomorHP, lowonganPekerjaan));
+        perusahaan.add(new Perusahaan(idPerusahaan, namaPerusahaan, alamatPerusahaan, email, nomorHP, null));
 
         System.out.println("Data perusahaan telah masuk");
-        input.nextLine();
 
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
@@ -259,6 +273,7 @@ public class App {
             System.out.println(naratiga);
         }
 
+        input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
@@ -276,6 +291,15 @@ public class App {
             System.out.println(pekerja2);
         }
 
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
+        }
     }
 
     public static void tampilPerusahaan() {
@@ -283,6 +307,16 @@ public class App {
         System.out.println("Data Perusahaan :");
         for (Perusahaan perusahaan2 : perusahaan) {
             System.out.println(perusahaan2);
+        }
+
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
         }
     }
 
@@ -299,6 +333,16 @@ public class App {
         for (PartTime part2 : part) {
             System.out.println(part2);
         }
+
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
+        }
     }
 
     public static void tampilMateriNarasumber() {
@@ -306,6 +350,16 @@ public class App {
         System.out.println("Narasumber :");
         for (Narasumber narasumber2 : narasumber) {
             System.out.println(narasumber2);
+        }
+
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
         }
     }
 

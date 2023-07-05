@@ -4,7 +4,7 @@ public class LowonganPekerjaan {
     private String idPerusahaan;
     private String namaPerusahaan;
     private String jobdesc;
-    private Integer jumlahPekerja;
+    private int jumlahPekerja;
     private JenisPekerjaan jenisPekerjaan;
     private String lokasi;
     private String lulusan;
@@ -14,7 +14,7 @@ public class LowonganPekerjaan {
     }
 
 
-    public LowonganPekerjaan(String idLowongan, String idPerusahaan, String namaPerusahaan, String jobdesc, String jumlahPekerja, JenisPekerjaan jenisPekerjaan, String lokasi, String lulusan) {
+    public LowonganPekerjaan(String idLowongan, String idPerusahaan, String namaPerusahaan, String jobdesc, int jumlahPekerja, JenisPekerjaan jenisPekerjaan, String lokasi, String lulusan) {
         this.idLowongan = idLowongan;
         this.idPerusahaan = idPerusahaan;
         this.namaPerusahaan = namaPerusahaan;
@@ -58,11 +58,11 @@ public class LowonganPekerjaan {
         this.jobdesc = jobdesc;
     }
 
-    public String getJumlahPekerja() {
+    public int getJumlahPekerja() {
         return this.jumlahPekerja;
     }
 
-    public void setJumlahPekerja(String jumlahPekerja) {
+    public void setJumlahPekerja(int jumlahPekerja) {
         this.jumlahPekerja = jumlahPekerja;
     }
 
@@ -94,16 +94,16 @@ public class LowonganPekerjaan {
     @Override
     public String toString() {
         return "{" +
-            " Id Lowongan ='" + getIdLowongan() + "'" +
-            ", Id Perusahaan = '" + getIdPerusahaan() + "'" +
+            " ID Lowongan = '" + getIdLowongan() + "'" +
+            ", ID Perusahaan = '" + getIdPerusahaan() + "'" +
             ", Nama perusahaan = '" + getNamaPerusahaan() + "'" +
-            ", Job desc = '" + getJobdesc() + "'" +
-            ", Jumlah pekerja = '" + getJumlahPekerja() + "'" +
-            ", Jenis pekerjaan = '" + getJenisPekerjaan() + "'" +
+            ", Jobdesc = '" + getJobdesc() + "'" +
+            ", Jumlah pekerja='" + getJumlahPekerja() + "'" +
+            ", Jenis pekerjaan='" + getJenisPekerjaan() + "'" +
             ", Lokasi = '" + getLokasi() + "'" +
             ", Lulusan = '" + getLulusan() + "'" +
             "}";
     }
-    
+
     
 }

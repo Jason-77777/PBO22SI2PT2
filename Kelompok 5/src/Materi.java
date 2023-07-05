@@ -10,12 +10,22 @@ public class Materi {
     }
 
 
-    public Materi(String topik, String jenisLatihan, String narasumber) {
+    public Materi(String idPekerja, String topik, String jenisLatihan, Narasumber narasumber, String pekerja) {
+        this.idPekerja = idPekerja;
         this.topik = topik;
         this.jenisLatihan = jenisLatihan;
         this.narasumber = narasumber;
+        this.pekerja = pekerja;
     }
 
+
+    public String getIdPekerja() {
+        return this.idPekerja;
+    }
+
+    public void setIdPekerja(String idPekerja) {
+        this.idPekerja = idPekerja;
+    }
 
     public String getTopik() {
         return this.topik;
@@ -33,21 +43,31 @@ public class Materi {
         this.jenisLatihan = jenisLatihan;
     }
 
-    public String getNarasumber() {
+    public Narasumber getNarasumber() {
         return this.narasumber;
     }
 
-    public void setNarasumber(String narasumber) {
+    public void setNarasumber(Narasumber narasumber) {
         this.narasumber = narasumber;
+    }
+
+    public String getPekerja() {
+        return this.pekerja;
+    }
+
+    public void setPekerja(String pekerja) {
+        this.pekerja = pekerja;
     }
 
 
     @Override
     public String toString() {
         return "{" +
-            "Topik = '" + getTopik() + "'" +
+            " ID Pekerja = '" + getIdPekerja() + "'" +
+            ", Topik = '" + getTopik() + "'" +
             ", Jenis latihan = '" + getJenisLatihan() + "'" +
             ", Narasumber = '" + getNarasumber() + "'" +
+            ", Pekerja = '" + getPekerja() + "'" +
             "}";
     }
 

@@ -10,8 +10,8 @@ public class Perusahaan {
     public Perusahaan() {
     }
 
-
-    public Perusahaan(String namaPerusahaan, String alamatPerusahaan, String email, String nomorHP, String lowonganPekerjaan) {
+    public Perusahaan(String idPerusahaan, String namaPerusahaan, String alamatPerusahaan, String email, String nomorHP, LowonganPekerjaan lowonganPekerjaan) {
+        this.idPerusahaan = idPerusahaan;
         this.namaPerusahaan = namaPerusahaan;
         this.alamatPerusahaan = alamatPerusahaan;
         this.email = email;
@@ -19,6 +19,14 @@ public class Perusahaan {
         this.lowonganPekerjaan = lowonganPekerjaan;
     }
 
+
+    public String getIdPerusahaan() {
+        return this.idPerusahaan;
+    }
+
+    public void setIdPerusahaan(String idPerusahaan) {
+        this.idPerusahaan = idPerusahaan;
+    }
 
     public String getNamaPerusahaan() {
         return this.namaPerusahaan;
@@ -52,11 +60,11 @@ public class Perusahaan {
         this.nomorHP = nomorHP;
     }
 
-    public String getLowonganPekerjaan() {
+    public LowonganPekerjaan getLowonganPekerjaan() {
         return this.lowonganPekerjaan;
     }
 
-    public void setLowonganPekerjaan(String lowonganPekerjaan) {
+    public void setLowonganPekerjaan(LowonganPekerjaan lowonganPekerjaan) {
         this.lowonganPekerjaan = lowonganPekerjaan;
     }
 
@@ -64,12 +72,15 @@ public class Perusahaan {
     @Override
     public String toString() {
         return "{" +
-            "Nama perusahaan = '" + getNamaPerusahaan() + "'" +
+            " ID Perusahaan = '" + getIdPerusahaan() + "'" +
+            ", Nama perusahaan = '" + getNamaPerusahaan() + "'" +
             ", Alamat = '" + getAlamatPerusahaan() + "'" +
-            ", Email='" + getEmail() + "'" +
+            ", Email = '" + getEmail() + "'" +
             ", No.Telp = '" + getNomorHP() + "'" +
-            ", Lowongan pekerjaan yang tesedia = '" + getLowonganPekerjaan() + "'" +
+            ", Lowongan pekerjaan yang tersedia = '" + getLowonganPekerjaan() + "'" +
             "}";
     }
+
+    
 
 }

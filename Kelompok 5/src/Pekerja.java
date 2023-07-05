@@ -18,8 +18,9 @@ public class Pekerja {
     }
    
 
-    public Pekerja(String idPekerja, String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan) {
+    public Pekerja(String idPekerja, String idJenisPekerjaan, String nama, String usia, String jenisKelamin, String alamat, String nomorHP, String email, String lulusan, String jenisPekerjaan) {
         this.idPekerja = idPekerja;
+        this.idJenisPekerjaan = idJenisPekerjaan;
         this.nama = nama;
         this.usia = usia;
         this.jenisKelamin = jenisKelamin;
@@ -27,6 +28,7 @@ public class Pekerja {
         this.nomorHP = nomorHP;
         this.email = email;
         this.lulusan = lulusan;
+        this.jenisPekerjaan = jenisPekerjaan;
     }
 
 
@@ -36,6 +38,14 @@ public class Pekerja {
 
     public void setIdPekerja(String idPekerja) {
         this.idPekerja = idPekerja;
+    }
+
+    public String getIdJenisPekerjaan() {
+        return this.idJenisPekerjaan;
+    }
+
+    public void setIdJenisPekerjaan(String idJenisPekerjaan) {
+        this.idJenisPekerjaan = idJenisPekerjaan;
     }
 
     public String getNama() {
@@ -94,21 +104,30 @@ public class Pekerja {
         this.lulusan = lulusan;
     }
 
-   
-    
+    public String getJenisPekerjaan() {
+        return this.jenisPekerjaan;
+    }
+
+    public void setJenisPekerjaan(String jenisPekerjaan) {
+        this.jenisPekerjaan = jenisPekerjaan;
+    }
+
+
     @Override
     public String toString() {
         return "{" +
-            "ID = '" + getIdPekerja() + "'" +
-            ", Nama='" + getNama() + "'" +
-            ", Usia ='" + getUsia() + "'" +
+            " ID Pekerja = '" + getIdPekerja() + "'" +
+            ", ID Jenis Pekerjaan = '" + getIdJenisPekerjaan() + "'" +
+            ", Nama = '" + getNama() + "'" +
+            ", Usia = '" + getUsia() + "'" +
             ", Jenis Kelamin = '" + getJenisKelamin() + "'" +
             ", Alamat = '" + getAlamat() + "'" +
             ", No.HP = '" + getNomorHP() + "'" +
             ", Email = '" + getEmail() + "'" +
             ", Lulusan = '" + getLulusan() + "'" +
+            ", Jenis pekerjaan = '" + getJenisPekerjaan() + "'" +
             "}";
     }
 
-
+    
 }
