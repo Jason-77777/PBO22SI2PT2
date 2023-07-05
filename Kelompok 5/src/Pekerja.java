@@ -11,7 +11,7 @@ public class Pekerja {
     private String nomorHP;
     private String email;
     private String lulusan;
-
+    private String jenisPekerjaan;
 
     public Pekerja() {
     }

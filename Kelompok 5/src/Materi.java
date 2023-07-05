@@ -3,6 +3,7 @@ public class Materi {
     private String topik;
     private String jenisLatihan;
     private String narasumber;
+    private String pekerja;
 
     public Materi() {
     }

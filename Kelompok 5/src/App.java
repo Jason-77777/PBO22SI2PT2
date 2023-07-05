@@ -128,10 +128,9 @@ public class App {
     }
 
     public static void dataPekerja() {
-        
+        input.nextLine();
         String idPekerja, nama, usia, jenisKelamin, alamat, nomorHP, lulusan, email;
-
-        System.out.print("ID\t : #"); 
+        System.out.print("ID : #"); 
         idPekerja = input.nextLine();
 
         System.out.print("Nama\t : ");
@@ -191,7 +190,7 @@ public class App {
         perusahaan.add(new Perusahaan(namaPerusahaan, alamatPerusahaan, email, nomorHP, lowonganPekerjaan));
 
         System.out.println("Data perusahaan telah masuk");
-
+        input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
@@ -226,7 +225,7 @@ public class App {
                 }
                 break;
         }
-
+        input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {

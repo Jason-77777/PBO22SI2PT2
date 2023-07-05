@@ -5,12 +5,11 @@ Sistem Informasi pekerjaan merupakan aplikasi pencari pekerjaan yang dimana dapa
 ## Fitur
 
 Fitur yang tersedia adalah :
-
-- Fitur 
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Fitur Pekerja : fitur ini terdapat profile yang berisi data diri, achievement, CV, dll.
+- Fitur Perusahaan : Fitur ini terdapat profile perusahaan yang dimana para pekerja dapat melihat profile dari perusahaan.
+- Fitur Jenis Pekerjaan : Fitur ini untuk para pekerja dapat melihat jenis pekerjaan yang tersedia dalam suatu perusahaan.
+- Fitur lowongan pekerjaan : Fitur ini untuk para pekerja dapat mendaftarkan diri dan mencari lowongan pekerjaan.
+- Fitur Training : Fitur ini dibuat untuk mengadakan seminar dan training untuk membagi tips n trick dalam dunia pekerjaan.
 
 ## Susunan Tim
 
