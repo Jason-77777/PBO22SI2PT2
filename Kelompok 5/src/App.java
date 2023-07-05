@@ -9,6 +9,7 @@ public class App {
     public static ArrayList<FullTime> full = new ArrayList<FullTime>();
     public static ArrayList<PartTime> part = new ArrayList<PartTime>();
     public static ArrayList<Perusahaan> perusahaan = new ArrayList<Perusahaan>();
+    public static ArrayList<Narasumber> narasumber = new ArrayList<Narasumber>();
     
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
@@ -23,16 +24,16 @@ public class App {
         System.out.println("1.  Pekerja");
         System.out.println("2.  Perusahaan");
         System.out.println("3.  Jenis dan Lowongan Pekerjaan");
-        System.out.println("4.  Training / Seminar");
+        System.out.println("4.  Training");
         System.out.println("5.  Tampilkan Profile Pekerja");
         System.out.println("6.  Tampilkan Data Perusahaan");
         System.out.println("7.  Tampilkan Jenis dan Lowongan Pekerjaan Full Time dan Part Time");
-        System.out.println("8.  Tampilkan Data Training / Seminar");
+        System.out.println("8.  Tampilkan Data Training dan Narasumber");
         System.out.println("9.  Hapus Data Pekerja");
         System.out.println("10. Hapus Data Perusahaan");
-        System.out.println("11. Hapus Data Jenis dan Lowongan Pekerjaan Full Time");
-        System.out.println("12. Hapus Data Jenis dan Lowongan Pekerjaan Part Time");
-        System.out.println("13. Hapus Data Training / Seminar");
+        System.out.println("11. Hapus Data Lowongan Pekerjaan Full Time");
+        System.out.println("12. Hapus Data Lowongan Pekerjaan Part Time");
+        System.out.println("13. Hapus Data Training dan Narasumber");
         System.out.println("15. Keluar");
         System.out.print("Pilihan : ");
 
@@ -51,8 +52,7 @@ public class App {
                 dataJenisLowonganPekerjaan();
                 break;
             case 4:
-                dataMateri();
-                dataNarasumber();
+                dataMateriNarasumber();
                 break;
             case 5:
                 tampilPekerja();
@@ -64,8 +64,7 @@ public class App {
                 tampilJenisLowongan();
                 break;
             case 8 :
-                tampilMateri();
-                tampilNarasumber();
+                tampilMateriNarasumber();
                 break;
             case 9 :
                 hapusPekerja(0);
@@ -80,8 +79,7 @@ public class App {
                 hapusJenisLowonganPartTime(0);
                 break;
             case 13:
-                hapusMateri();
-                hapusNarasumber();
+                hapusMateriNarasumber(0);
                 break;
             case 15 :
                 kembali = false;
@@ -121,8 +119,12 @@ public class App {
         PartTime parttiga = new PartTime("UD. Bersama Makmur", "Jln. Jeruk No.12, Medan", "081364857164", "3 jam", "Rp.1,000,000", "Part Time");
         part.add(parttiga);
 
-
-
+        Narasumber narasatu = new Narasumber("Aldi Taher", "L", "31 tahun", "alditaher22@gmail.com", "081364758945", "S2", "Senior Financial Manager", "PT. Sumber Jaya");
+        narasumber.add(narasatu);
+        Narasumber naradua = new Narasumber("Surya Wicaksono", "L", "28", "suryawcs17@gmail.com", "081264751834", "S2", "Software Egineer", "LevelUp");
+        narasumber.add(naradua);
+        Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
+        narasumber.add(naratiga);
     }
 
     public static void dataPekerja() {
@@ -188,7 +190,7 @@ public class App {
 
         perusahaan.add(new Perusahaan(namaPerusahaan, alamatPerusahaan, email, nomorHP, lowonganPekerjaan));
 
-        System.out.println("Data perusahaan telah masuk.");
+        System.out.println("Data perusahaan telah masuk");
 
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
@@ -225,7 +227,7 @@ public class App {
                 break;
         }
 
-        System.out.println("Kembali ke menu utama ? (yes/no): ");
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
@@ -235,19 +237,49 @@ public class App {
         }
     }
 
-    public static void dataMateri() {
+    public static void dataMateriNarasumber() {
 
+        System.out.println("Silakan memilih topik Training yang tersedia :");
+        System.out.println("1. Akuntansi");
+        System.out.println("2. Teknologi");
+        System.out.print("Pilihan : ");
+        int pilihan = input.nextInt();
+
+        if (pilihan == 1) {
+            Narasumber narasatu =  new Narasumber("Aldi Taher", "L", "31", "alditaher22@gmail.com", "081364758945", "S2", "Senior Financial Manager", "PT. Sumber Jaya");
+            System.out.println(narasatu);
+        } else {
+            Narasumber naradua = new Narasumber("Surya Wicaksono", "L", "28", "suryawcs17@gmail.com", "081264751834", "S2", "Software Egineer", "LevelUp");
+            System.out.println(naradua);
+            Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
+            System.out.println(naratiga);
+        }
+
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
+        }
     }
 
-    public static void dataNarasumber() {
-
-    }
 
     public static void tampilPekerja() {
 
         System.out.println("Profile Pekerja :");
         for (Pekerja pekerja2 : pekerja) {
             System.out.println(pekerja2);
+        }
+
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else  {
+            System.out.println("Terima Kasih !!!");
+            System.exit(0);
         }
     }
 
@@ -256,6 +288,15 @@ public class App {
         System.out.println("Data Perusahaan :");
         for (Perusahaan perusahaan2 : perusahaan) {
             System.out.println(perusahaan2);
+        }
+
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else  {
+            System.out.println("Terima Kasih !!!");
+            System.exit(0);
         }
     }
 
@@ -272,14 +313,32 @@ public class App {
         for (PartTime part2 : part) {
             System.out.println(part2);
         }
+
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else  {
+            System.out.println("Terima Kasih !!!");
+            System.exit(0);
+        }
     }
 
-    public static void tampilMateri() {
+    public static void tampilMateriNarasumber() {
 
-    }
+        System.out.println("Narasumber :");
+        for (Narasumber narasumber2 : narasumber) {
+            System.out.println(narasumber2);
+        }
 
-    public static void tampilNarasumber() {
-
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else  {
+            System.out.println("Terima Kasih !!!");
+            System.exit(0);
+        }
     }
 
     public static void hapusPekerja(int andi) {
@@ -298,12 +357,7 @@ public class App {
         part.remove(partsatu);
     }
 
-    public static void hapusMateri() {
-
-    }
-
-    public static void hapusNarasumber() {
-
+    public static void hapusMateriNarasumber(int narasatu) {
+        narasumber.remove(narasatu);
     }
 }   
-
