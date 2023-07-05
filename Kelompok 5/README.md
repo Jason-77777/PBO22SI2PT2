@@ -1,18 +1,24 @@
-## Getting Started
+## Sistem Informasi Pekerjaan
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Sistem Informasi pekerjaan merupakan aplikasi pencari pekerjaan yang dimana dapat membantu agar dapat lebih mudah dalam mencari pekerjaan di jaman sekarang. Di dalamnya terdapat jenis-jenis pekerjaan, jenis perusahaan, Seminar, Tutoring, dan masih banyak lagi. Dengan aplikasi ini dapat memudahkan para mahasiswa/i dan orang yang sulit mendapatkan pekerjaan dan mendapatkan banyak informasi tentang dunia pekerjaan
 
-## Folder Structure
+## Fitur
 
-The workspace contains two folders by default, where:
+Fitur yang tersedia adalah :
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Fitur 
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
 > If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Susunan Tim
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Ketua kelompok
+- Jason (03081220018)
+
+Anggota
+- Cherry Cok
+- Geovani Zovintho
+- Verrel Angkasa (03081220031)
+- Vicky Darmana (03081220038)
