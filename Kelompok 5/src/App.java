@@ -116,11 +116,11 @@ public class App {
         FullTime fulltiga = new FullTime("Full Time", "AsuransiKesehatan", "15 juta");
         full.add(fulltiga);
 
-        PartTime partsatu = new PartTime("UD. Desa Maju", "Jln. Sutomo No.19, Medan", "081354794568", "4 jam", "Rp.1,500,000", "Part Time");
+        PartTime partsatu = new PartTime("Part Time", "AsuransiKesehatan", "100 ribu per jam");
         part.add(partsatu);
-        PartTime partdua = new PartTime("CV. Sumatra Jaya", "Jln. Krakatau No.29, Medan", "061-156347", "3 jam", "Rp.1,300,000", "Part Time");
+        PartTime partdua = new PartTime("Part Time", "AsuransiTenagaKerja", "200 ribu per jam");
         part.add(partdua);
-        PartTime parttiga = new PartTime("UD. Bersama Makmur", "Jln. Jeruk No.12, Medan", "081364857164", "3 jam", "Rp.1,000,000", "Part Time");
+        PartTime parttiga = new PartTime("Part Time", "AsuransiTenagaKerja", "300 ribu per jam");
         part.add(parttiga);
 
         Narasumber narasatu = new Narasumber("Aldi Taher", "L", "31 tahun", "alditaher22@gmail.com", "081364758945", "S2", "Senior Financial Manager", "PT. Sumber Jaya");
