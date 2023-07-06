@@ -287,11 +287,15 @@ public class App {
     public static void tampilPekerja() {
 
         System.out.println("Profile Pekerja :");
+        System.out.println("--------------------------------------------------------------------------------------------------------");
+        System.out.printf("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |%n",
+        "IDPekerja", "IDJenisPekerjaaan", "Nama", "Usia", "Gender", "Alamat", "NomorHP", "Email", "Lulusan", "JenisPekerjaan");
         for (Pekerja pekerja2 : pekerja) {
             System.out.println(pekerja2);
         }
+        System.out.println("--------------------------------------------------------------------------------------------------------");
+        input.nextLine();        
 
-        input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
