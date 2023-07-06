@@ -109,11 +109,11 @@ public class App {
         Perusahaan emas = new Perusahaan("146", "PT. Emas Top", "Jln. Mabar No.296, Medan", "emastoptop88@gmail.com", "061-457183", null);
         perusahaan.add(emas);
 
-        FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
+        FullTime fullsatu = new FullTime("Full Time", "AsuransiKesehatan", "5 juta");
         full.add(fullsatu);
-        FullTime fulldua = new FullTime("CV. Angin Topan", "Jln. Berastagi No.56, Medan", "061-786451", "7 jam", "Rp.3,000,000", "Full Time");
+        FullTime fulldua = new FullTime("Full Time", "AsuransiKesehatan", "10 juta");
         full.add(fulldua);
-        FullTime fulltiga = new FullTime("PT Emas Top", "Jln. Mabar No.296, Medan", "061-457183", "9 jam", "Rp.4,500,000", "Full Time");
+        FullTime fulltiga = new FullTime("Full Time", "AsuransiKesehatan", "15 juta");
         full.add(fulltiga);
 
         PartTime partsatu = new PartTime("UD. Desa Maju", "Jln. Sutomo No.19, Medan", "081354794568", "4 jam", "Rp.1,500,000", "Part Time");
