@@ -130,6 +130,13 @@ public class App {
         Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
         narasumber.add(naratiga);
 
+        LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "104", "PT. Maju Jaya", "Accountant", 3, null, "Medan", "S1");
+        lowongan.add(lowosatu);
+        LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "264", "CV. Angin Topan", "", 0, null, null, null);
+        lowongan.add(lowodua);
+        LowonganPekerjaan lowotiga = new LowonganPekerjaan(null, null, null, null, 0, null, null, null);
+        lowongan.add(lowotiga);
+
     }
 
     public static void dataPekerja() {
@@ -285,35 +292,35 @@ public class App {
 
     public static void tampilPekerja() {
 
-    StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
 
-    // Membangun header tabel
-    sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
-    sb.append("------------------------------------------------------------------------------------------------------------\n");
+        // Membangun header tabel
+        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
+        sb.append("------------------------------------------------------------------------------------------------------------\n");
 
-    // Membangun data pekerja
-    for (Pekerja pekerja : pekerja) {
-        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+         // Membangun data pekerja
+        for (Pekerja pekerja : pekerja) {
+            sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
                 pekerja.getIdPekerja(), pekerja.getIdJenisPekerjaan(), pekerja.getNama(), pekerja.getUsia(), pekerja.getJenisKelamin(), pekerja.getAlamat(),
                 pekerja.getNomorHP(), pekerja.getEmail(), pekerja.getLulusan(), pekerja.getJenisPekerjaan()));
+        }
+
+        // Menambahkan garis penutup tabel
+        sb.append("------------------------------------------------------------------------------------------------------------\n");
+
+        // Menampilkan output
+        System.out.println(sb.toString());
+
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
+        }
     }
-
-    // Menambahkan garis penutup tabel
-    sb.append("------------------------------------------------------------------------------------------------------------\n");
-
-    // Menampilkan output
-    System.out.println(sb.toString());
-
-    input.nextLine();
-    System.out.print("Kembali ke menu utama ? (yes/no): ");
-    String goBack = input.nextLine();
-    if (goBack.equalsIgnoreCase("yes")) {
-        return;
-    } else {
-        System.out.println("Terima kasih !!!");
-        System.exit(0);
-    }
-}
 
 
     public static void tampilPerusahaan() {
@@ -337,16 +344,12 @@ public class App {
     public static void tampilJenisLowongan() {
 
         System.out.println("Lowongan pekerjaan Full Time :");
-        for (FullTime full2 : full) {
-            System.out.println(full2);
-        }
+        
 
         System.out.println("-----------------------");
 
         System.out.println("Lowongan pekerjaan Part Time :");
-        for (PartTime part2 : part) {
-            System.out.println(part2);
-        }
+       
 
         input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
