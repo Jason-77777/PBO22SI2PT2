@@ -129,14 +129,6 @@ public class App {
         narasumber.add(naradua);
         Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
         narasumber.add(naratiga);
-
-        LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "104", "PT. Maju Jaya", "Accountant", 3, null, "Medan", "S1");
-        lowongan.add(lowosatu);
-        LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "264", "CV. Angin Topan", "", 0, null, null, null);
-        lowongan.add(lowodua);
-        LowonganPekerjaan lowotiga = new LowonganPekerjaan(null, null, null, null, 0, null, null, null);
-        lowongan.add(lowotiga);
-
     }
 
     public static void dataPekerja() {
