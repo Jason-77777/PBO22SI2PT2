@@ -7,63 +7,36 @@ public abstract class JenisPekerjaan {
     private String tipePekerjaanPartTime;
 
 
-    public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String nomorTelp, String jamKerja, String gaji, String tipePekerjaan) {
-        this.namaPerusahaan = namaPerusahaan;
-        this.alamatPerusahaan = alamatPerusahaan;
-        this.nomorTelp = nomorTelp;
-        this.jamKerja = jamKerja;
-        this.gaji = gaji;
-        this.tipePekerjaan = tipePekerjaan;
+    public JenisPekerjaan(String idJenisPekerjaan, String tipePekerjaanFullTime, String tipePekerjaanPartTime) {
+        this.idJenisPekerjaan = idJenisPekerjaan;
+        this.tipePekerjaanFullTime = tipePekerjaanFullTime;
+        this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
 
-
-    public String getNamaPerusahaan() {
-        return this.namaPerusahaan;
+    public String getIdJenisPekerjaan() {
+        return this.idJenisPekerjaan;
     }
 
-    public void setNamaPerusahaan(String namaPerusahaan) {
-        this.namaPerusahaan = namaPerusahaan;
+    public void setIdJenisPekerjaan(String idJenisPekerjaan) {
+        this.idJenisPekerjaan = idJenisPekerjaan;
     }
 
-    public String getAlamatPerusahaan() {
-        return this.alamatPerusahaan;
+    public String getTipePekerjaanFullTime() {
+        return this.tipePekerjaanFullTime;
     }
 
-    public void setAlamatPerusahaan(String alamatPerusahaan) {
-        this.alamatPerusahaan = alamatPerusahaan;
+    public void setTipePekerjaanFullTime (String tipePekerjaanFullTime) {
+        this.tipePekerjaanFullTime = tipePekerjaanFullTime;
     }
 
-    public String getNomorTelp() {
-        return this.nomorTelp;
+
+    public String getTipePekerjaanPartTime() {
+        return this.tipePekerjaanPartTime;
     }
 
-    public void setNomorTelp(String nomorTelp) {
-        this.nomorTelp = nomorTelp;
-    }
-
-    public String getJamKerja() {
-        return this.jamKerja;
-    }
-
-    public void setJamKerja(String jamKerja) {
-        this.jamKerja = jamKerja;
-    }
-
-    public String getGaji() {
-        return this.gaji;
-    }
-
-    public void setGaji(String gaji) {
-        this.gaji = gaji;
-    }
-
-    public String getTipePekerjaan() {
-        return this.tipePekerjaan;
-    }
-
-    public void setTipePekerjaan(String tipePekerjaan) {
-        this.tipePekerjaan = tipePekerjaan;
+    public void setTipePekerjaanPartTime(String tipePekerjaanPartTime) {
+        this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
 
 
@@ -71,12 +44,9 @@ public abstract class JenisPekerjaan {
     @Override
     public String toString() {
         return "{" +
-            "Nama perusahaan = '" + getNamaPerusahaan() + "'" +
-            ", Alamat = '" + getAlamatPerusahaan() + "'" +
-            ", No.Telp = '" + getNomorTelp() + "'" +
-            ", Jam kerja = '" + getJamKerja() + "'" +
-            ", Gaji = '" + getGaji() + "'" +
-            ", Tipe = '" + getTipePekerjaan() + "'" +
+            "Nama perusahaan = '" + getIdJenisPekerjaan() + "'" +
+            ", Alamat = '" + getTipePekerjaanFullTime() + "'" +
+            ", Tipe = '" + getTipePekerjaanPartTime() + "'" +
             "}";
     }
     
