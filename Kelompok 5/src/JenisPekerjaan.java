@@ -3,7 +3,6 @@
 public abstract class JenisPekerjaan {
 
     private String idJenisPekerjaan;
-    private String tipePekerjaan;
     private String tipePekerjaanFullTime;
     private String tipePekerjaanPartTime;
 
@@ -13,7 +12,6 @@ public abstract class JenisPekerjaan {
 
     public JenisPekerjaan(String idJenisPekerjaan, String tipePekerjaan, String tipePekerjaanFullTime, String tipePekerjaanPartTime) {
         this.idJenisPekerjaan = idJenisPekerjaan;
-        this.tipePekerjaan = tipePekerjaan;
         this.tipePekerjaanFullTime = tipePekerjaanFullTime;
         this.tipePekerjaanPartTime = tipePekerjaanPartTime;
     }
@@ -25,14 +23,6 @@ public abstract class JenisPekerjaan {
 
     public void setIdJenisPekerjaan(String idJenisPekerjaan) {
         this.idJenisPekerjaan = idJenisPekerjaan;
-    }
-
-    public String getTipePekerjaan() {
-        return this.tipePekerjaan;
-    }
-
-    public void setTipePekerjaan(String tipePekerjaan) {
-        this.tipePekerjaan = tipePekerjaan;
     }
 
     public String getTipePekerjaanFullTime() {
@@ -56,7 +46,6 @@ public abstract class JenisPekerjaan {
     public String toString() {
         return "{" +
             " ID Jenis Pekerjaan = '" + getIdJenisPekerjaan() + "'" +
-            ", Tipe pekerjaan = '" + getTipePekerjaan() + "'" +
             ", Tipe pekerjaan Full Time = '" + getTipePekerjaanFullTime() + "'" +
             ", Tipe pekerjaan Part Time = '" + getTipePekerjaanPartTime() + "'" +
             "}";
