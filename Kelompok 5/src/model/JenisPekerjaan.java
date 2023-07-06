@@ -2,12 +2,9 @@ package model;
 
 public abstract class JenisPekerjaan {
 
-    private String namaPerusahaan;
-    private String alamatPerusahaan;
-    private String nomorTelp;
-    private String jamKerja;
-    private String gaji;
-    private String tipePekerjaan;
+    private String idJenisPekerjaan;
+    private String tipePekerjaanFullTime;
+    private String tipePekerjaanPartTime;
 
 
     public JenisPekerjaan(String namaPerusahaan, String alamatPerusahaan, String nomorTelp, String jamKerja, String gaji, String tipePekerjaan) {
