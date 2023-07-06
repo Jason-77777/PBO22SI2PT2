@@ -2,9 +2,9 @@ package model;
 
 public class PartTime extends JenisPekerjaan{
 
-    public PartTime(String namaPerusahaan, String alamatPerusahaan, String nomorTelp, String jamKerja,
-            String gaji, String tipepekerjaan) {
-        super(namaPerusahaan, alamatPerusahaan, nomorTelp, jamKerja, gaji, tipepekerjaan);
+    public PartTime(String idJenisPekerjaan, String tipePekerjaanFullTime,
+            String tipePekerjaanPartTime) {
+        super(idJenisPekerjaan, tipePekerjaanFullTime, tipePekerjaanPartTime);
     }
 
     @Override
