@@ -286,31 +286,35 @@ public class App {
 
     public static void tampilPekerja() {
 
-        System.out.println("Profile Pekerja :");
-        System.out.println("--------------------------------------------------------------------------------------------------------");
-        System.out.printf("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |%n",
-        "IDPekerja", "IDJenisPekerjaaan", "Nama", "Usia", "Gender", "Alamat", "NomorHP", "Email", "Lulusan", "JenisPekerjaan");
-        for (Pekerja pekerja2 : pekerja) {
-            System.out.println(pekerja2);
-        }
-        System.out.println("--------------------------------------------------------------------------------------------------------");
-        input.nextLine();        
+    StringBuilder sb = new StringBuilder();
 
-        // Mengganti format cetak untuk mencetak data pekerja
-        System.out.printf("| %-5s | %-5s | %-5s | %-4s | %-6s | %-20s | %-10s | %-30s | %-9s | %-12s |%n",
-        andi.getIdPekerja(), andi.getIdJenisPekerjaan(), andi.getNama(), andi.getUsia(), andi.getJenisKelamin(),
-        andi.getAlamat(), andi.getNomorHP(), andi.getEmail(), andi.getLulusan(), andi.getJenisPekerjaan());
+    // Membangun header tabel
+    sb.append("------------------------------------------------------------------------------------------------------------\n");
+    sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %3s | %3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
+    sb.append("------------------------------------------------------------------------------------------------------------\n");
 
+    // Membangun data pekerja
+    for (Pekerja pekerja : pekerja) {
+    sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %3s | %3 |\n",
+            pekerja.getIdPekerja(), pekerja.getIdJenisPekerjaan(), pekerja.getNama(), pekerja.getUsia(), pekerja.getJenisKelamin(), pekerja.getAlamat(),
+            pekerja.getEmail(), pekerja.getLulusan(), pekerja.getJenisPekerjaan()));
+}
 
-        System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String goBack = input.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else {
-            System.out.println("Terima kasih !!!");
-            System.exit(0);
-        }
+    // Menambahkan garis penutup tabel
+    sb.append("------------------------------------------------------------------------------------------------------------\n");
+
+    // Menampilkan output
+    System.out.println(sb.toString());
+
+    System.out.print("Kembali ke menu utama ? (yes/no): ");
+    String goBack = input.nextLine();
+    if (goBack.equalsIgnoreCase("yes")) {
+        return;
+    } else {
+        System.out.println("Terima kasih !!!");
+        System.exit(0);
     }
+}
 
     public static void tampilPerusahaan() {
         
