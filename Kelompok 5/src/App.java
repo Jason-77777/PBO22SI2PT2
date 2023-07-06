@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 import model.FullTime;
@@ -289,7 +288,6 @@ public class App {
     StringBuilder sb = new StringBuilder();
 
     // Membangun header tabel
-    sb.append("------------------------------------------------------------------------------------------------------------\n");
     sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
     sb.append("------------------------------------------------------------------------------------------------------------\n");
 
@@ -306,6 +304,7 @@ public class App {
     // Menampilkan output
     System.out.println(sb.toString());
 
+    input.nextLine();
     System.out.print("Kembali ke menu utama ? (yes/no): ");
     String goBack = input.nextLine();
     if (goBack.equalsIgnoreCase("yes")) {
