@@ -296,6 +296,12 @@ public class App {
         System.out.println("--------------------------------------------------------------------------------------------------------");
         input.nextLine();        
 
+        // Mengganti format cetak untuk mencetak data pekerja
+        System.out.printf("| %-5s | %-5s | %-5s | %-4s | %-6s | %-20s | %-10s | %-30s | %-9s | %-12s |%n",
+        andi.getIdPekerja(), andi.getIdJenisPekerjaan(), andi.getNama(), andi.getUsia(), andi.getJenisKelamin(),
+        andi.getAlamat(), andi.getNomorHP(), andi.getEmail(), andi.getLulusan(), andi.getJenisPekerjaan());
+
+
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
