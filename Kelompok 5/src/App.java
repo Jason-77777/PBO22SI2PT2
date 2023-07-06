@@ -290,15 +290,15 @@ public class App {
 
     // Membangun header tabel
     sb.append("------------------------------------------------------------------------------------------------------------\n");
-    sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %3s | %3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
+    sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
     sb.append("------------------------------------------------------------------------------------------------------------\n");
 
     // Membangun data pekerja
     for (Pekerja pekerja : pekerja) {
-    sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %3s | %3 |\n",
-            pekerja.getIdPekerja(), pekerja.getIdJenisPekerjaan(), pekerja.getNama(), pekerja.getUsia(), pekerja.getJenisKelamin(), pekerja.getAlamat(),
-            pekerja.getEmail(), pekerja.getLulusan(), pekerja.getJenisPekerjaan()));
-}
+        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+                pekerja.getIdPekerja(), pekerja.getIdJenisPekerjaan(), pekerja.getNama(), pekerja.getUsia(), pekerja.getJenisKelamin(), pekerja.getAlamat(),
+                pekerja.getNomorHP(), pekerja.getEmail(), pekerja.getLulusan(), pekerja.getJenisPekerjaan()));
+    }
 
     // Menambahkan garis penutup tabel
     sb.append("------------------------------------------------------------------------------------------------------------\n");
@@ -315,6 +315,7 @@ public class App {
         System.exit(0);
     }
 }
+
 
     public static void tampilPerusahaan() {
         
