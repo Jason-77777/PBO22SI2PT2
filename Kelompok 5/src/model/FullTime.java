@@ -2,9 +2,8 @@ package model;
 
 public class FullTime extends JenisPekerjaan{
 
-    public FullTime(String idJenisPekerjaan, String tipePekerjaanFullTime,
-             String tipePekerjaanPartTime) {
-        super(idJenisPekerjaan, tipePekerjaanFullTime, tipePekerjaanPartTime);
+    public FullTime(String tipePekerjaanFullTime, String asuransiKesehatan, String tunjanganPerTahun) {
+        super(tipePekerjaanFullTime, asuransiKesehatan, tunjanganPerTahun);
 }
 
     @Override
