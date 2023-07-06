@@ -110,19 +110,19 @@ public class App {
         Perusahaan emas = new Perusahaan("146", "PT. Emas Top", "Jln. Mabar No.296, Medan", "emastoptop88@gmail.com", "061-457183", null);
         perusahaan.add(emas);
 
-        FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
-        full.add(fullsatu);
-        FullTime fulldua = new FullTime("CV. Angin Topan", "Jln. Berastagi No.56, Medan", "061-786451", "7 jam", "Rp.3,000,000", "Full Time");
-        full.add(fulldua);
-        FullTime fulltiga = new FullTime("PT Emas Top", "Jln. Mabar No.296, Medan", "061-457183", "9 jam", "Rp.4,500,000", "Full Time");
-        full.add(fulltiga);
+        //FullTime fullsatu = new FullTime("PT Maju Jaya", "Jln. Industri No.109, Medan", "061-123478", "8 jam", "Rp.3,500,000", "Full Time");
+        //full.add(fullsatu);
+        //FullTime fulldua = new FullTime("CV. Angin Topan", "Jln. Berastagi No.56, Medan", "061-786451", "7 jam", "Rp.3,000,000", "Full Time");
+        //full.add(fulldua);
+        //FullTime fulltiga = new FullTime("PT Emas Top", "Jln. Mabar No.296, Medan", "061-457183", "9 jam", "Rp.4,500,000", "Full Time");
+        //full.add(fulltiga);
 
-        PartTime partsatu = new PartTime("UD. Desa Maju", "Jln. Sutomo No.19, Medan", "081354794568", "4 jam", "Rp.1,500,000", "Part Time");
-        part.add(partsatu);
-        PartTime partdua = new PartTime("CV. Sumatra Jaya", "Jln. Krakatau No.29, Medan", "061-156347", "3 jam", "Rp.1,300,000", "Part Time");
-        part.add(partdua);
-        PartTime parttiga = new PartTime("UD. Bersama Makmur", "Jln. Jeruk No.12, Medan", "081364857164", "3 jam", "Rp.1,000,000", "Part Time");
-        part.add(parttiga);
+        //PartTime partsatu = new PartTime("UD. Desa Maju", "Jln. Sutomo No.19, Medan", "081354794568", "4 jam", "Rp.1,500,000", "Part Time");
+        //part.add(partsatu);
+        //PartTime partdua = new PartTime("CV. Sumatra Jaya", "Jln. Krakatau No.29, Medan", "061-156347", "3 jam", "Rp.1,300,000", "Part Time");
+        //part.add(partdua);
+        //PartTime parttiga = new PartTime("UD. Bersama Makmur", "Jln. Jeruk No.12, Medan", "081364857164", "3 jam", "Rp.1,000,000", "Part Time");
+        //part.add(parttiga);
 
         Narasumber narasatu = new Narasumber("Aldi Taher", "L", "31 tahun", "alditaher22@gmail.com", "081364758945", "S2", "Senior Financial Manager", "PT. Sumber Jaya");
         narasumber.add(narasatu);
