@@ -28,13 +28,14 @@ public class App {
         System.out.println("4.  Training");
         System.out.println("5.  Tampilkan Profile Pekerja");
         System.out.println("6.  Tampilkan Data Perusahaan");
-        System.out.println("7.  Tampilkan Jenis dan Lowongan Pekerjaan Full Time dan Part Time");
-        System.out.println("8.  Tampilkan Data Training dan Narasumber");
-        System.out.println("9.  Hapus Data Pekerja");
-        System.out.println("10. Hapus Data Perusahaan");
-        System.out.println("11. Hapus Data Lowongan Pekerjaan Full Time");
-        System.out.println("12. Hapus Data Lowongan Pekerjaan Part Time");
-        System.out.println("13. Hapus Data Training dan Narasumber");
+        System.out.println("7.  Tampilkan Data Jenis Pekerjaan");
+        System.out.println("8.  Tampilakn Data Lowongan Pekerjaan Full Time dan Part Time");
+        System.out.println("9.  Tampilkan Data Training dan Narasumber");
+        System.out.println("10. Hapus Data Pekerja");
+        System.out.println("11. Hapus Data Perusahaan");
+        System.out.println("12. Hapus Data Lowongan Pekerjaan Full Time");
+        System.out.println("13. Hapus Data Lowongan Pekerjaan Part Time");
+        System.out.println("14. Hapus Data Training dan Narasumber");
         System.out.println("15. Keluar");
         System.out.print("Pilihan : ");
 
@@ -58,28 +59,31 @@ public class App {
             case 5:
                 tampilPekerja();
                 break;
-            case 6 :
+            case 6:
                 tampilPerusahaan();
                 break;
             case 7:
-                tampilJenisLowongan();
+                tampilJenisPekerjaan();
                 break;
-            case 8 :
+            case 8:
+                tampilLowongan();
+                break;
+            case 9:
                 tampilMateriNarasumber();
                 break;
-            case 9 :
+            case 10:
                 hapusPekerja(0);
                 break;
-            case 10 :
+            case 11:
                 hapusPerusahaan(0);
                 break;
-            case 11 :
+            case 12:
                 hapusJenisLowonganFullTime(0);
                 break;
-            case 12 :
-                hapusJenisLowonganPartTime(0);
-                break;
             case 13:
+                hapusJenisLowonganPartTime(3);
+                break;
+            case 14:
                 hapusMateriNarasumber(0);
                 break;
             case 15 :
@@ -109,6 +113,7 @@ public class App {
         Perusahaan emas = new Perusahaan("146", "PT. Emas Top", "Jln. Mabar No.296, Medan", "emastoptop88@gmail.com", "061-457183", null);
         perusahaan.add(emas);
 
+        //Tipe Full Time
         LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "164", "PT. Siantar Top", "Accountant", 2, null, "Medan", "S1");
         lowongan.add(lowosatu);
         LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "547", "PT. Silverware", "Product Manager", 1, null, "Medan", "S1");
@@ -116,6 +121,7 @@ public class App {
         LowonganPekerjaan lowotiga = new LowonganPekerjaan("A1", "761", "PT. Kelapa Hijau", "Social Media Specialist", 1, null, "Medan", "S1");
         lowongan.add(lowotiga);
 
+        //Tipe Part Time
         LowonganPekerjaan lowoempat = new LowonganPekerjaan("B1", "321", "UD. Jaya Makmur", "Security", 2, null, "Medan", "SMA");
         lowongan.add(lowoempat);
         LowonganPekerjaan lowolima = new LowonganPekerjaan("B1", "648", "CV. Sumatra One", "Karyawati", 3, null, "Medan", "SMA");
@@ -449,7 +455,32 @@ public class App {
         }
     }
 
-    public static void tampilJenisLowongan() {
+    public static void tampilJenisPekerjaan() {
+
+        System.out.println("Full Time ");
+        for (FullTime full2 : full) {
+            System.out.println(full2);
+        }
+
+        System.out.println("-----------------------");
+
+        System.out.println("Part Time");
+        for (PartTime part2 : part) {
+            System.out.println(part2);
+        }
+
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
+        }
+    }
+
+    public static void tampilLowongan() {
 
         System.out.println("Lowongan pekerjaan Full Time dan Part Time :");
         for (LowonganPekerjaan lowongan2 : lowongan) {
@@ -509,12 +540,12 @@ public class App {
         perusahaan.remove(maju);
     }
 
-    public static void hapusJenisLowonganFullTime(int fullsatu) {
-        full.remove(fullsatu);
+    public static void hapusJenisLowonganFullTime(int lowosatu) {
+        lowongan.remove(lowosatu);
     }
 
-    public static void hapusJenisLowonganPartTime(int partsatu) {
-        part.remove(partsatu);
+    public static void hapusJenisLowonganPartTime(int lowoempat) {
+        lowongan.remove(lowoempat);
     }
 
     public static void hapusMateriNarasumber(int narasatu) {
