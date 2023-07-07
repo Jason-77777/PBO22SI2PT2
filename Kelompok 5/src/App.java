@@ -109,6 +109,20 @@ public class App {
         Perusahaan emas = new Perusahaan("146", "PT. Emas Top", "Jln. Mabar No.296, Medan", "emastoptop88@gmail.com", "061-457183", null);
         perusahaan.add(emas);
 
+        LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "164", "PT. Siantar Top", "Accountant", 2, null, "Medan", "S1");
+        lowongan.add(lowosatu);
+        LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "547", "PT. Silverware", "Product Manager", 1, null, "Medan", "S1");
+        lowongan.add(lowodua);
+        LowonganPekerjaan lowotiga = new LowonganPekerjaan("A1", "761", "PT. Kelapa Hijau", "Social Media Specialist", 1, null, "Medan", "S1");
+        lowongan.add(lowotiga);
+
+        LowonganPekerjaan lowoempat = new LowonganPekerjaan("B1", "321", "UD. Jaya Makmur", "Security", 2, null, "Medan", "SMA");
+        lowongan.add(lowoempat);
+        LowonganPekerjaan lowolima = new LowonganPekerjaan("B1", "648", "CV. Sumatra One", "Karyawati", 3, null, "Medan", "SMA");
+        lowongan.add(lowolima);
+        LowonganPekerjaan lowoenam = new LowonganPekerjaan("B1", "391", "CV. Lintas Abadi", "Karyawan", 2, null, "Medan", "SMA");
+        lowongan.add(lowoenam);
+
         FullTime fullsatu = new FullTime("Full Time", "AsuransiKesehatan", "5 juta");
         full.add(fullsatu);
         FullTime fulldua = new FullTime("Full Time", "AsuransiKesehatan", "10 juta");
@@ -226,22 +240,59 @@ public class App {
 
         int pilih = input.nextInt();
 
-        System.out.println("Lowongan pekerjaan yang tersedia :");
+        System.out.println("Tipe pekerjaan :");
 
         switch (pilih) {
             case 1:
                 for (FullTime full2 : full) {
                     System.out.println(full2);
                 }
-                break;
+
+                System.out.print("Pilih 1 atau 2 atau 3 : ");
+                int pilihan = input.nextInt();
+                System.out.println("Lowongan pekerjaan yang tersedia : ");
+                switch (pilihan) {
+                    case 1:
+                        LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "164", "PT. Siantar Top", "Accountant", 2, null, "Medan", "S1");
+                        System.out.println(lowosatu);
+                        break;
+                    case 2:
+                        LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "547", "PT. Silverware", "Product Manager", 1, null, "Medan", "S1");
+                        System.out.println(lowodua);
+                        break;
+                    case 3:
+                        LowonganPekerjaan lowotiga = new LowonganPekerjaan("A1", "761", "PT. Kelapa Hijau", "Social Media Specialist", 1, null, "Medan", "S1");
+                        System.out.println(lowotiga);
+                        break;
+                    
+                }
+            break;
         
             case 2:
                 for (PartTime part2 : part) {
                     System.out.println(part2);
                 }
+
+                System.out.print("Pilih 1 atau 2 atau 3 : ");
+                int choice = input.nextInt();
+                System.out.println("Lowongan pekerjaan yang tersedia : ");
+                switch (choice) {
+                    case 1:
+                        LowonganPekerjaan lowoempat = new LowonganPekerjaan("B1", "321", "UD. Jaya Makmur", "Security", 2, null, "Medan", "SMA");
+                        System.out.println(lowoempat);
+                        break;
+                    case 2:
+                        LowonganPekerjaan lowolima = new LowonganPekerjaan("B1", "648", "CV. Sumatra One", "Karyawati", 3, null, "Medan", "SMA");
+                        System.out.println(lowolima);
+                        break;
+                    case 3:
+                        LowonganPekerjaan lowoenam = new LowonganPekerjaan("B1", "391", "CV. Lintas Abadi", "Karyawan", 2, null, "Medan", "SMA");
+                        System.out.println(lowoenam);
+                        break;
+                }
                 break;
         }
-        
+
         input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
@@ -253,91 +304,80 @@ public class App {
         }
     }
 
+    public static void dataMateriNarasumber() {
 
+        System.out.println("Silakan memilih topik Training yang tersedia :");
+        System.out.println("1. Akuntansi");
+        System.out.println("2. Teknologi");
+        System.out.print("Pilihan : ");
+        int pilihan = input.nextInt();
 
+        if (pilihan == 1) {
 
+            StringBuilder sb = new StringBuilder();
 
-
-public static void dataMateriNarasumber() {
-    System.out.println("Silakan memilih topik Training yang tersedia :");
-    System.out.println("1. Akuntansi");
-    System.out.println("2. Teknologi");
-    System.out.print("Pilihan : ");
-    int pilihan = input.nextInt();
-
-    if (pilihan == 1) {
-
-        StringBuilder sb = new StringBuilder();
-
-        // Membangun header tabel
-        sb.append(String.format("| %-15s | %-6s | %-4s | %-20s | %-12s | %-10s | %-20s | %-20s |\n",
-        "Nama", "Gender", "Usia", "Email", "Nomor HP", "Lulusan", "Jabatan", "Perusahaan"));
-        sb.append("----------------------------------------------------------------------------\n");
-
-        // Membangun data
-        if (!narasumber.isEmpty()) {
-            Narasumber narasumberData1 = narasumber.get(0);
+            // Membangun header tabel
             sb.append(String.format("| %-15s | %-6s | %-4s | %-20s | %-12s | %-10s | %-20s | %-20s |\n",
-            narasumberData1.getNama(), narasumberData1.getJenisKelamin(), narasumberData1.getUsia(),
-            narasumberData1.getEmail(), narasumberData1.getNomorTelepon(), narasumberData1.getLulusan(),
-            narasumberData1.getJabatan(), narasumberData1.getPerusahaan()));
+            "Nama", "Gender", "Usia", "Email", "Nomor HP", "Lulusan", "Jabatan", "Perusahaan"));
+            sb.append("----------------------------------------------------------------------------\n");
+
+            // Membangun data
+            if (!narasumber.isEmpty()) {
+                Narasumber narasumberData1 = narasumber.get(0);
+                sb.append(String.format("| %-15s | %-6s | %-4s | %-20s | %-12s | %-10s | %-20s | %-20s |\n",
+                narasumberData1.getNama(), narasumberData1.getJenisKelamin(), narasumberData1.getUsia(),
+                narasumberData1.getEmail(), narasumberData1.getNomorTelepon(), narasumberData1.getLulusan(),
+                narasumberData1.getJabatan(), narasumberData1.getPerusahaan()));
+            }   else {
+                sb.append("Tidak ada data narasumber.\n");
+            }
+
+            // Menambahkan garis penutup tabel
+            sb.append("----------------------------------------------------------------------------\n");
+
+            // Menampilkan output
+            System.out.println(sb.toString());
+
+        } else if (pilihan == 2) {
+            StringBuilder sb = new StringBuilder();
+
+            // Membangun header tabel
+            sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+            "Nama", "Gender", "Usia", "Email", "Nomor HP", "Lulusan", "Jabatan", "Perusahaan"));
+            sb.append("----------------------------------------------------------------------------\n");
+
+            // Membangun data naradua
+            Narasumber naradua = new Narasumber("Surya Wicaksono", "L", "28", "suryawcs17@gmail.com", "081264751834", "S2", "Software Engineer", "LevelUp");
+            sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+            naradua.getNama(), naradua.getJenisKelamin(), naradua.getUsia(), naradua.getEmail(),
+            naradua.getNomorTelepon(), naradua.getLulusan(), naradua.getJabatan(), naradua.getPerusahaan()));
+
+            // Membangun data naratiga
+            Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
+            sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+            naratiga.getNama(), naratiga.getJenisKelamin(), naratiga.getUsia(), naratiga.getEmail(),
+            naratiga.getNomorTelepon(), naratiga.getLulusan(), naratiga.getJabatan(), naratiga.getPerusahaan()));
+
+            // Menambahkan garis penutup tabel
+            sb.append("----------------------------------------------------------------------------\n");
+
+            // Menampilkan output
+            System.out.println(sb.toString());
+
         } else {
-            sb.append("Tidak ada data narasumber.\n");
+            System.out.println("Pilihan tidak valid.");
         }
 
-        // Menambahkan garis penutup tabel
-        sb.append("----------------------------------------------------------------------------\n");
-
-        // Menampilkan output
-        System.out.println(sb.toString());
-
-    } else if (pilihan == 2) {
-        StringBuilder sb = new StringBuilder();
-
-        // Membangun header tabel
-        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
-        "Nama", "Gender", "Usia", "Email", "Nomor HP", "Lulusan", "Jabatan", "Perusahaan"));
-        sb.append("----------------------------------------------------------------------------\n");
-
-        // Membangun data naradua
-        Narasumber naradua = new Narasumber("Surya Wicaksono", "L", "28", "suryawcs17@gmail.com", "081264751834", "S2", "Software Engineer", "LevelUp");
-        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
-        naradua.getNama(), naradua.getJenisKelamin(), naradua.getUsia(), naradua.getEmail(),
-        naradua.getNomorTelepon(), naradua.getLulusan(), naradua.getJabatan(), naradua.getPerusahaan()));
-
-        // Membangun data naratiga
-        Narasumber naratiga = new Narasumber("Michelle Alexandra", "P", "24", "michie20@gmail.com", "081245781357", "S1", "Freelance Web Designer", "");
-        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
-        naratiga.getNama(), naratiga.getJenisKelamin(), naratiga.getUsia(), naratiga.getEmail(),
-        naratiga.getNomorTelepon(), naratiga.getLulusan(), naratiga.getJabatan(), naratiga.getPerusahaan()));
-
-        // Menambahkan garis penutup tabel
-        sb.append("----------------------------------------------------------------------------\n");
-
-        // Menampilkan output
-        System.out.println(sb.toString());
-
-    } else {
-        System.out.println("Pilihan tidak valid.");
+        input.nextLine();
+        System.out.print("Kembali ke menu utama ? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else {
+            System.out.println("Terima kasih !!!");
+            System.exit(0);
+        }
     }
-
-    input.nextLine();
-    System.out.print("Kembali ke menu utama ? (yes/no): ");
-    String goBack = input.nextLine();
-    if (goBack.equalsIgnoreCase("yes")) {
-        return;
-    } else {
-        System.out.println("Terima kasih !!!");
-        System.exit(0);
-    }
-}
-
-
-
-
-
-
-
 
     public static void tampilPekerja() {
 
@@ -411,13 +451,10 @@ public static void dataMateriNarasumber() {
 
     public static void tampilJenisLowongan() {
 
-        System.out.println("Lowongan pekerjaan Full Time :");
-        
-
-        System.out.println("-----------------------");
-
-        System.out.println("Lowongan pekerjaan Part Time :");
-       
+        System.out.println("Lowongan pekerjaan Full Time dan Part Time :");
+        for (LowonganPekerjaan lowongan2 : lowongan) {
+            System.out.println(lowongan2);
+        }
 
         input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
@@ -429,10 +466,6 @@ public static void dataMateriNarasumber() {
             System.exit(0);
         }
     }
-
-
-
-
 
     public static void tampilMateriNarasumber() {
 
@@ -467,12 +500,6 @@ public static void dataMateriNarasumber() {
         System.exit(0);
     }
 }
-
-
-
-
-
-
 
     public static void hapusPekerja(int andi) {
         pekerja.remove(andi);
