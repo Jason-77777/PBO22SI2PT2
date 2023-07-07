@@ -430,23 +430,49 @@ public static void dataMateriNarasumber() {
         }
     }
 
+
+
+
+
     public static void tampilMateriNarasumber() {
 
-        System.out.println("Narasumber :");
-        for (Narasumber narasumber2 : narasumber) {
-            System.out.println(narasumber2);
-        }
+    StringBuilder sb = new StringBuilder();
 
-        input.nextLine();
-        System.out.print("Kembali ke menu utama ? (yes/no): ");
-        String goBack = input.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else {
-            System.out.println("Terima kasih !!!");
-            System.exit(0);
-        }
+    // Membangun header tabel
+    sb.append(String.format("| %-15s | %-6s | %-4s | %-20s | %-12s | %-10s | %-20s | %-20s |\n",
+    "Nama", "Gender", "Usia", "Email", "Nomor HP", "Lulusan", "Jabatan", "Perusahaan"));
+    sb.append("-------------------------------------------------------------------------------\n");
+
+    // Membangun data narasumber
+    for (Narasumber narasumber : narasumber) {
+        sb.append(String.format("| %-15s | %-6s | %-4s | %-20s | %-12s | %-10s | %-20s | %-20s |\n",
+        narasumber.getNama(), narasumber.getJenisKelamin(), narasumber.getUsia(), narasumber.getEmail(),
+        narasumber.getNomorTelepon(), narasumber.getLulusan(), narasumber.getJabatan(), narasumber.getPerusahaan()));
     }
+
+    // Menambahkan garis penutup tabel
+    sb.append("--------------------------------------------------------------------------------\n");
+
+    // Menampilkan output
+    System.out.println("Narasumber :");
+    System.out.println(sb.toString());
+
+    input.nextLine();
+    System.out.print("Kembali ke menu utama ? (yes/no): ");
+    String goBack = input.nextLine();
+    if (goBack.equalsIgnoreCase("yes")) {
+        return;
+    } else {
+        System.out.println("Terima kasih !!!");
+        System.exit(0);
+    }
+}
+
+
+
+
+
+
 
     public static void hapusPekerja(int andi) {
         pekerja.remove(andi);
