@@ -287,13 +287,15 @@ public class App {
         StringBuilder sb = new StringBuilder();
 
         // Membangun header tabel
-        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n", "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
+        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+        "ID", "JenisPekerjaan", "Nama", "Usia", "Gender", "Alamat", "No HP", "Email", "Lulusan", "JenisPekerjaan"));
         sb.append("------------------------------------------------------------------------------------------------------------\n");
 
          // Membangun data pekerja
         for (Pekerja pekerja : pekerja) {
             sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
-                pekerja.getIdPekerja(), pekerja.getIdJenisPekerjaan(), pekerja.getNama(), pekerja.getUsia(), pekerja.getJenisKelamin(), pekerja.getAlamat(),
+                pekerja.getIdPekerja(), pekerja.getIdJenisPekerjaan(), pekerja.getNama(), pekerja.getUsia()
+                , pekerja.getJenisKelamin(), pekerja.getAlamat(),
                 pekerja.getNomorHP(), pekerja.getEmail(), pekerja.getLulusan(), pekerja.getJenisPekerjaan()));
         }
 
@@ -316,11 +318,28 @@ public class App {
 
 
     public static void tampilPerusahaan() {
-        
-        System.out.println("Data Perusahaan :");
-        for (Perusahaan perusahaan2 : perusahaan) {
-            System.out.println(perusahaan2);
+
+        StringBuilder sb = new StringBuilder();
+
+        // Membangun header tabel
+        sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+        "ID Perusahaan", "Alamat Perusahaan", "Email", "Nomor HP", "Lowongan Pekerjaan"));
+        sb.append("------------------------------------------------------------------------------------------------------------\n");
+
+
+         // Membangun data
+        for (Perusahaan perusahaan : perusahaan) {
+            sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+                perusahaan.getIdPerusahaan(), perusahaan.getNamaPerusahaan(), perusahaan.getAlamatPerusahaan(), 
+                perusahaan.getEmail(), perusahaan.getNomorHP(), perusahaan.getLowonganPekerjaan()));
         }
+
+        // Menambahkan garis penutup tabel
+        sb.append("------------------------------------------------------------------------------------------------------------\n");
+
+        // Menampilkan output
+        System.out.println(sb.toString());
+        
 
         input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
