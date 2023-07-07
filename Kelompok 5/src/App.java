@@ -262,8 +262,32 @@ public class App {
         int pilihan = input.nextInt();
 
         if (pilihan == 1) {
-            Narasumber narasatu =  new Narasumber("Aldi Taher", "L", "31", "alditaher22@gmail.com", "081364758945", "S2", "Senior Financial Manager", "PT. Sumber Jaya");
+
+            StringBuilder sb = new StringBuilder();
+
+            // Membangun header tabel
+            sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s |\n",
+            "Nama", "Gender", "Usia", "Email", "Nomor HP", "Lulusan", "Jabatan", "Perusahaan"));
+            sb.append("------------------------------------------------------------------------------------------------------------\n");
+
+
+            // Membangun data
+            Narasumber narasumber = narasumber.get(0); {
+                sb.append(String.format("| %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s | %-3s|\n",
+                narasumber.getNama(), narasumber.getJenisKelamin(), narasumber.getUsia(), narasumber.getEmail(),
+                narasumber.getNomorTelepon(), narasumber.getLulusan(), narasumber.getJabatan(), narasumber.getPerusahaan()));
+        }
+
+            // Menambahkan garis penutup tabel
+            sb.append("------------------------------------------------------------------------------------------------------------\n");
+
+            // Menampilkan output
+            System.out.println(sb.toString());
+
+            Narasumber narasatu =  new Narasumber("Aldi Taher", "L", "31", "alditaher22@gmail.com"
+            , "081364758945", "S2", "Senior Financial Manager", "PT. Sumber Jaya");
             System.out.println(narasatu);
+
         } else {
             Narasumber naradua = new Narasumber("Surya Wicaksono", "L", "28", "suryawcs17@gmail.com", "081264751834", "S2", "Software Egineer", "LevelUp");
             System.out.println(naradua);
