@@ -29,7 +29,7 @@ public class App {
         System.out.println("5.  Tampilkan Profile Pekerja");
         System.out.println("6.  Tampilkan Data Perusahaan");
         System.out.println("7.  Tampilkan Data Jenis Pekerjaan");
-        System.out.println("8.  Tampilakn Data Lowongan Pekerjaan Full Time dan Part Time");
+        System.out.println("8.  Tampilkan Data Lowongan Pekerjaan Full Time dan Part Time");
         System.out.println("9.  Tampilkan Data Training dan Narasumber");
         System.out.println("10. Hapus Data Pekerja");
         System.out.println("11. Hapus Data Perusahaan");
