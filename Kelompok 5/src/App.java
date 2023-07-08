@@ -237,68 +237,78 @@ public class App {
         }
     }
 
-    public static void dataJenisLowonganPekerjaan(){
 
+
+
+
+
+
+    public static void dataJenisLowonganPekerjaan() {
         System.out.println("Jenis Pekerjaan :");
         System.out.println("1. Full Time");
         System.out.println("2. Part Time");
         System.out.print("Pilihan : ");
-
         int pilih = input.nextInt();
-
+    
         System.out.println("Tipe pekerjaan :");
-
+    
         switch (pilih) {
             case 1:
                 for (FullTime full2 : full) {
                     System.out.println(full2);
                 }
-
+    
                 System.out.print("Pilih 1 atau 2 atau 3 : ");
                 int pilihan = input.nextInt();
+    
                 System.out.println("Lowongan pekerjaan yang tersedia : ");
                 switch (pilihan) {
                     case 1:
-                        LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "164", "PT. Siantar Top", "Accountant", 2, null, "Medan", "S1");
+                        LowonganPekerjaan lowosatu = new LowonganPekerjaan("A1", "164", "PT. Siantar Top", "Accountant",
+                            2, null, "Medan", "S1");
                         System.out.println(lowosatu);
                         break;
                     case 2:
-                        LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "547", "PT. Silverware", "Product Manager", 1, null, "Medan", "S1");
+                        LowonganPekerjaan lowodua = new LowonganPekerjaan("A1", "547", "PT. Silverware", "Product Manager",
+                            1, null, "Medan", "S1");
                         System.out.println(lowodua);
                         break;
                     case 3:
-                        LowonganPekerjaan lowotiga = new LowonganPekerjaan("A1", "761", "PT. Kelapa Hijau", "Social Media Specialist", 1, null, "Medan", "S1");
+                        LowonganPekerjaan lowotiga = new LowonganPekerjaan("A1", "761", "PT. Kelapa Hijau",
+                            "Social Media Specialist", 1, null, "Medan", "S1");
                         System.out.println(lowotiga);
                         break;
-                    
                 }
-            break;
-        
+                break;
+    
             case 2:
                 for (PartTime part2 : part) {
                     System.out.println(part2);
                 }
-
+                
                 System.out.print("Pilih 1 atau 2 atau 3 : ");
                 int choice = input.nextInt();
                 System.out.println("Lowongan pekerjaan yang tersedia : ");
                 switch (choice) {
                     case 1:
-                        LowonganPekerjaan lowoempat = new LowonganPekerjaan("B1", "321", "UD. Jaya Makmur", "Security", 2, null, "Medan", "SMA");
+                        LowonganPekerjaan lowoempat = new LowonganPekerjaan("B1", "321", "UD. Jaya Makmur", "Security",
+                            2, null, "Medan", "SMA");
                         System.out.println(lowoempat);
                         break;
                     case 2:
-                        LowonganPekerjaan lowolima = new LowonganPekerjaan("B1", "648", "CV. Sumatra One", "Karyawati", 3, null, "Medan", "SMA");
+                        LowonganPekerjaan lowolima = new LowonganPekerjaan("B1", "648", "CV. Sumatra One", "Karyawati",
+                            3, null, "Medan", "SMA");
                         System.out.println(lowolima);
                         break;
                     case 3:
-                        LowonganPekerjaan lowoenam = new LowonganPekerjaan("B1", "391", "CV. Lintas Abadi", "Karyawan", 2, null, "Medan", "SMA");
+                        LowonganPekerjaan lowoenam = new LowonganPekerjaan("B1", "391", "CV. Lintas Abadi", "Karyawan",
+                            2, null, "Medan", "SMA");
                         System.out.println(lowoenam);
                         break;
                 }
                 break;
         }
-
+    
         input.nextLine();
         System.out.print("Kembali ke menu utama ? (yes/no): ");
         String goBack = input.nextLine();
@@ -309,6 +319,16 @@ public class App {
             System.exit(0);
         }
     }
+    
+    
+
+
+
+
+
+
+
+
 
     public static void dataMateriNarasumber() {
 
