@@ -17,7 +17,7 @@ Ketua kelompok
 - Jason (03081220018)
 
 Anggota
-- Cherry Cok
-- Geovani Zovintho
+- Cherry Cok (03081220034)
+- Geovani Zovintho (03081220001)
 - Verrel Angkasa (03081220031)
 - Vicky Darmana (03081220038)
