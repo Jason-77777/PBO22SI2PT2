@@ -4,7 +4,7 @@ public class Materi {
     private String topik;
     private String jenisLatihan;
     private Narasumber narasumber;
-    private String pekerja;
+    private String arrayList;
 
     public Materi() {
     }
