@@ -44,9 +44,9 @@ public abstract class JenisPekerjaan {
     @Override
     public String toString() {
         return "{" +
-            "Nama perusahaan = '" + getIdJenisPekerjaan() + "'" +
-            ", Alamat = '" + getTipePekerjaanFullTime() + "'" +
-            ", Tipe = '" + getTipePekerjaanPartTime() + "'" +
+            "Tipe = '" + getIdJenisPekerjaan() + "'" +
+            ", Benefit = '" + getTipePekerjaanFullTime() + "'" +
+            ", Gaji = '" + getTipePekerjaanPartTime() + "'" +
             "}";
     }
     
