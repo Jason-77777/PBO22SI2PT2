@@ -15,7 +15,7 @@ public class Materi {
         this.topik = topik;
         this.jenisLatihan = jenisLatihan;
         this.narasumber = narasumber;
-        this.pekerja = pekerja;
+        this.arrayList = arrayList;
     }
 
 
@@ -51,12 +51,12 @@ public class Materi {
         this.narasumber = narasumber;
     }
 
-    public String getPekerja() {
-        return this.pekerja;
+    public String getArrayList() {
+        return this.arrayList;
     }
 
     public void setPekerja(String pekerja) {
-        this.pekerja = pekerja;
+        this.arrayList = arrayList;
     }
 
 
@@ -67,7 +67,7 @@ public class Materi {
             ", Topik = '" + getTopik() + "'" +
             ", Jenis latihan = '" + getJenisLatihan() + "'" +
             ", Narasumber = '" + getNarasumber() + "'" +
-            ", Pekerja = '" + getPekerja() + "'" +
+            ", Pekerja = '" + getArrayList() + "'" +
             "}";
     }
 
