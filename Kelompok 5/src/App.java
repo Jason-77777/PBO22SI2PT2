@@ -236,13 +236,7 @@ public class App {
             System.exit(0);
         }
     }
-
-
-
-
-
-
-
+    
     public static void dataJenisLowonganPekerjaan() {
         System.out.println("Jenis Pekerjaan :");
         System.out.println("1. Full Time");
