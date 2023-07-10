@@ -320,16 +320,6 @@ public class App {
         }
     }
     
-    
-
-
-
-
-
-
-
-
-
     public static void dataMateriNarasumber() {
 
         System.out.println("Silakan memilih topik Training yang tersedia :");
